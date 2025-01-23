@@ -1,0 +1,517 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background styling */
+body {
+    background-color: #FFFBFB;
+    font-family: 'Proxima Nova', sans-serif;
+    overflow: hidden; 
+}
+
+/* Main container */
+.login-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Ensures content does not overflow */
+} 
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 560px;
+    height: 560px;
+    z-index: 3;
+    left: 650px;
+    top: 20px;
+}
+
+/* Login box styling */
+.login-box {
+    position: relative;
+    width: 1386px;
+    height: 685px;
+    background: #FFFFFF;
+    box-shadow: 0px 9px 15px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 22px;
+    padding: 10px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 2; /* Ensures it's above the tire on the right */
+    margin-right: 650px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 32px;
+    color: #282959;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 700px;
+}
+
+label {
+    font-weight: 700;
+    font-size: 18px;
+    color: #282959;
+    margin-bottom: 50px;
+    margin-left: 700px;
+}
+
+.input-container {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    margin-left: 700px;
+    border: none;
+
+}
+
+input {
+    width: 350px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #A0A0A0;
+    font-size: 18px;
+    color: black;
+    background-color: transparent; /* Transparent background for line style */
+}
+
+/*.forgot-password {
+    color: #5A55AC;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 900px;
+} */
+
+button {
+    width: 361px;
+    padding: 10px;
+    background: #FF0B0B;
+    border-radius: 47px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 700px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #FF3333;
+}
+
+/* Positioning for tires */
+.tire-left {
+    position: absolute;
+    top: -180px; /* Moves the tire above the login box */
+    left: -180px;
+    z-index: 1; /* Above the login container */
+}
+
+.tire-right {
+    position: absolute;
+    bottom: -300px; /* Moves the tire below the login box */
+    left: 1400px;
+    z-index: 3; /* Behind the login container */
+}
+
+.tire-left img {
+    max-width: 800px;
+    max-height: 700px;
+}
+.tire-right img {
+    max-width: 800px;
+    max-height: 700px;
+}
+.login-container::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+#back-button {
+    position: absolute;
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    top: -50px; /* Adjust as needed */
+    right: 560px; /* Adjust as needed */
+    padding: 0; /* Remove padding to avoid extra space */
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    z-index: 4; /* Ensure it's above other content */
+}
+
+#back-button img {
+    width: 100%; /* Make the image fill the button */
+    height: 100%; /* Make the image fill the button */
+}
+#back-button:hover img {
+    opacity: 0.7; /* Change opacity on hover */
+}
+.popup-container {
+    display: none; /* Hide by default */ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure it is above other elements */
+}
+.popup-container.show {
+    display: flex;
+}
+
+.popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    max-width: 800px;
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin-bottom: 20px;
+}
+
+.popup input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup button {
+    width: 150px;
+    padding: 10px 20px;
+    background: #FF0B0B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.popup button:hover {
+    background: #FF3333;
+}
+#change-password-form button[type="submit"] {
+    width: 180px;
+    padding: 10px 20px;
+    background: #FF0B0B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+/* Login error popup styling */
+#login-error-popup {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+#login-error-popup .popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    width: 90%;
+}
+
+#close-login-error-popup {
+    padding: 10px 20px;
+    background: white;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Error popup styling */
+#error-popup {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#error-popup .popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    width: 90%;
+}
+
+#close-error-popup {
+    padding: 10px 20px;
+    background: #FF0B0B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-error-popup:hover {
+    background: #FF3333;
+}
+
+/* OTP Input Style */
+.otp-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.otp-box {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    text-align: center;
+    font-size: 36px; /* Adjust this to control asterisk size */
+    line-height: 100px; /* Match line-height to height to center vertically */
+    border: none;
+    border-bottom: 2px solid #A0A0A0;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+.otp-verification-popup {
+    max-width: 500px; /* Set a narrower width */
+    width: 90%; /* Make it responsive */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+/* Failure mark styling for failure */
+#otp-verification-popup .failure-mark {
+    display: none;
+    color: red; /* Red color for failure */
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* When failure state is active, show the failure mark */
+#otp-verification-popup.failure .failure-mark {
+    display: block;
+}
+
+#verify-otp-form button {
+    width: 45%; /* Make buttons narrower */
+    margin: 5px; /* Space between buttons */
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Container for OTP buttons to ensure alignment */
+.otp-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+/* Loading popup styling */
+/* Loading popup styling */
+/* Loading popup styling */
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #FF0B0B; /* Change this color as needed */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: block;
+}
+
+.spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Checkmark styling */
+/* Hide both success and failure indicators by default */
+.checkmark, .failure-mark {
+    display: none;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Checkmark styling for success */
+#loading-popup.success .checkmark {
+    display: block;
+    color: green; /* Green color for success */
+}
+
+#loading-popup.success .failure-mark {
+    display: none; /* Hide X icon on success */
+}
+
+/* Failure mark styling for failure */
+#loading-popup.failure .failure-mark {
+    display: block;
+    color: red; /* Red color for failure */
+}
+
+#loading-popup.failure .checkmark {
+    display: none; /* Hide checkmark on failure */
+}
+
+
+/* Ensure the loading popup is hidden by default */
+#loading-popup {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* When the success state is active, show the checkmark and hide the spinner */
+#loading-popup.success .loading-spinner {
+    display: none; /* Hide spinner */
+}
+
+#resend-otp-button {
+    background: none;
+    color: #b0b0b0; /* Light gray color */
+    border: none;
+    font-size: 18px; 
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: -20px;
+}
+
+#resend-otp-button:disabled {
+    color: #d3d3d3; /* Even lighter gray when disabled */
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 1024px) {
+    .image-container {
+        max-width: 90%; /* Adjust width for medium screens */
+    }
+    #back-button {
+        width: 40px; /* Adjust button size */
+        height: 40px;
+    }
+    .login-box {
+        max-width: 350px; /* Reduce width slightly */
+    }
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 80%; /* Adjust width for mobile screens */
+    }
+    #back-button {
+        width: 35px; /* Smaller back button */
+        height: 35px;
+        top: 10px; /* Adjust positioning */
+        left: 10px;
+    }
+    .login-box {
+        max-width: 300px; /* Further reduce for mobile */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px; /* Adjust header size */
+    }
+
+    input, button {
+        font-size: 16px; /* Slightly reduce input and button font sizes */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .image-container {
+        max-width: 100%; /* Full width on small devices */
+    }
+    #back-button {
+        width: 30px; /* Even smaller button */
+        height: 30px;
+        top: 5px;
+        left: 5px;
+    }
+    .login-box {
+        max-width: 280px; /* Smaller for very small screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust header size */
+    }
+
+    input, button {
+        font-size: 14px; /* Reduce font sizes further */
+    }
+}

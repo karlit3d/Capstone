@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service-Tagging</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="service-tagging.css">
+</head>
+<body>
+<!-- Header from admin-inventory.html -->
+    <div class="header">
+        <div class="header-left">
+            <h1>AG</h1>
+            <h2>TECH</h2>
+            <div class="nav-links">
+                <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                <a href="inventory.html" class="nav-item">Inventory</a>
+                <a href="admin-appointment.html" class="nav-item">Appointment</a>
+                <a href="#" class="nav-item active">Service Tagging</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <p>Hey, Admin</p>
+            <div class="profile-pic"></div>
+        </div>
+    </div>
+
+    <!-- Heading Section -->
+    <section class="booking-header">
+        <h1>Service-Tagging</h1>
+        <p class="subheading">Service Records and History</p>
+    </section>
+
+    <!-- Tabs inside a gray container -->
+    <div class="tab-container">
+        <div class="tabs">
+            <button class="tab active" data-tab="ticketing">Ticketing</button>
+            <button class="tab" data-tab="service-history">Service History</button>
+        </div>
+    </div>
+  
+    <!-- Create Ticket Button moved outside the tab container -->
+    <button id="create-ticket-btn" class="create-ticket-btn">Create Ticket</button>
+
+    <!-- Create Ticket Popup -->
+    <!-- Create Ticket Popup -->
+    <div id="create-ticket-popup" class="popup hidden">
+        <div class="popup-content">
+            <h3>Create a Walk - In Customer Ticket</h3>
+            <form id="createTicketForm">
+                <!-- First Name and Last Name -->
+                <div class="form-row">
+                    <div class="half-width">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <!-- Appointment Date and Time -->
+                <div class="form-row">
+                    <div class="half-width">
+                        <label for="appointmentDate">Appointment Date:</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="appointmentTime">Appointment Time:</label>
+                        <input type="time" id="appointmentTime" name="appointmentTime" required>
+                    </div>
+                </div>
+
+                <!-- Car Brand, Car Model, and Car Year -->
+                <div class="form-row">
+                    <div class="third-width">
+                        <label for="carBrand">Car Brand:</label>
+                        <input type="text" id="carBrand" name="carBrand" required>
+                    </div>
+                    <div class="third-width">
+                        <label for="carModel">Car Model:</label>
+                        <input type="text" id="carModel" name="carModel" required>
+                    </div>
+                    <div class="third-width">
+                        <label for="carYear">Car Year:</label>
+                        <input type="text" id="carYear" name="carYear" required>
+                    </div>
+                </div>
+
+                <!-- Plate Number and Contact Number -->
+                <div class="form-row">
+                    <div class="half-width">
+                        <label for="plateNumber">Plate Number:</label>
+                        <input type="text" id="plateNumber" name="plateNumber" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="contactNumber">Contact Number:</label>
+                        <input type="text" id="contactNumber" name="contactNumber" required>
+                    </div>
+                </div>
+
+                <!-- Service and Mechanic -->
+                <label for="services">Service:</label>
+                <input type="text" id="services" name="services" required>
+
+                <label for="mechanic">Mechanic:</label>
+                <input type="text" id="mechanic" name="mechanic" required>
+
+                <!-- Buttons -->
+                <div class="popup-buttons">
+                    <button type="button" id="close-create-ticket-popup-btn" class="close-btn">Close</button>
+                    <button type="submit" class="done-btn">Create Ticket</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="create-ticket-overlay" class="overlay hidden"></div>
+
+
+
+    
+    <!-- Ticketing Tab -->
+    <div class="tab-content active" id="ticketing">
+        <div class="appointments-list" id="ticketing-list">
+            <!-- Ticketing cards will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Service History Tab -->
+    <div class="tab-content" id="service-history">
+        <div class="appointments-list" id="service-history-list">
+            <!-- Service History cards will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Popup Modal for Edit -->
+    <div id="edit-popup" class="hidden">
+        <div class="popup-content">
+            <ul>
+                <!-- Popup content for editing tickets will be injected here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Checklist Popup Modal -->
+    <div id="checklist-popup" class="popup-checklist hidden">
+        <div class="popup-checklist-content">
+            <div id="checklist-content"></div> <!-- Where the checklist will be displayed -->
+            <button id="close-checklist-btn"><i class="fas fa-times"></i> Close</button>
+        </div>
+    </div>
+    
+    <div id="create-job-order-popup" class="popup hidden"></div>
+    <div id="overlay" class="overlay hidden"></div>
+
+    <!-- Upload Checklist Popup Modal --> 
+    <div id="upload-checklist-popup" class="popup hidden">
+        <div class="popup-content">
+            <h3>Upload Checklist</h3>
+            <form id="checklistUploadForm" enctype="multipart/form-data">
+                <label for="checklistFile">Select Checklist Image:</label>
+                <input type="file" id="checklistFile" name="checklistFile" accept="image/*" required>
+                <button type="submit"><i class="fas fa-upload"></i> Upload</button>
+                <button id="close-upload-popup-btn"><i class="fas fa-times"></i> Close</button>
+            </form>
+            <div id="uploaded-checklist"></div>
+        </div>
+    </div>
+
+    <div id="progress-report-popup" class="progress-popup">
+        <div class="progress-header">
+            <p class="small-id"></p> <!-- Small ID goes here -->
+            <h3></h3> <!-- Service name goes here -->
+            <p>Date: 19 Aug 2024</p> <!-- Example Appointment Date -->
+            <p>Mechanic: Alfredo Batumbakal</p> <!-- Example Mechanic -->
+            <p>Name:</p>
+            <p>Estimate Date of Completion:</p>
+        </div>
+    
+        <div class="progress-content">
+            <!-- In Progress Section -->
+            <div class="progress-section">
+                <h4>In Progress</h4>
+                <ul id="in-progress-list">
+                    <!-- JavaScript will populate this -->
+                </ul>
+            </div>
+    
+            <!-- Completed Section -->
+            <div class="progress-section">
+                <h4>Completed</h4>
+                <ul id="completed-list">
+                    <!-- JavaScript will populate this -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="progressLinkContainer">
+            <label for="progressLink">Progress Report Link:</label>
+            <div id="inputButtonContainer">
+                <input type="text" id="progressLink" readonly />
+                <button id="copyLinkBtn">Copy Link</button>
+                <button id="add-part-button" class="progress-add-part-btn">Add Part</button>
+            </div>
+        </div>
+        <div id="add-part-popup" class="popup hidden">
+            <div class="popup-content">
+                <h3>Additional Parts</h3>
+
+                <label for="partName">Part Name:</label>
+                <input type="text" id="partName" placeholder="Enter part name" required>
+
+                <label for="partQuantity">Quantity:</label>
+                <input type="number" id="partQuantity" min="1" placeholder="Enter quantity" required>
+
+                <label for="availableStock">Available Stock:</label>
+                <input type="number" id="availableStocks" placeholder="Stock Available" readonly>
+        
+                <label for="daysToDeliver">Days to Deliver:</label>
+                <input type="number" id="daysToDeliver" min="0" placeholder="Enter days to deliver" style="display: none;">
+
+                <button id="add-part-to-list" class="add-button">Add</button>
+
+                <h4>Parts Used:</h4>
+                <div id="partsAddedContainer" class="parts-list">
+                    <!-- Added parts will be displayed here -->
+                </div>
+
+                <div class="popup-button">
+                    <button id="close-add-part-popup">Close</button>
+                    <button id="save-part-button">Save</button>
+                </div>
+            </div>
+        </div>
+        <button id="close-progress-report-btn" class="close-btn">Close</button>
+    </div>
+    
+    <div id="overlay" class="overlay"></div>
+    
+
+    
+    <!-- Link the JavaScript file -->
+    <script src="service-tagging.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body> 
+    <div class="login-container">
+        <div class="image-container">
+            <button type="button" id="back-button">
+                <img src="back.png" alt="Back">
+            </button>
+            <img src="car-login.png" alt="Car illustration"> 
+        </div>
+        <div class="login-box"> 
+            <h1>Login</h1>
+            <form>
+                <label for="username">Username</label>
+                <div class="input-container">
+                    <input type="text" id="admin-username" name="username" placeholder="Type your username">
+                </div>
+                
+                <label for="password">Password</label>
+                <div class="input-container">
+                    <input type="password" id="admin-password" name="password" placeholder="Type your password">
+                </div>
+                
+                <button type="button" class="forgot-password" id="forgot-password">Forgot password?</button>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="tire-left">
+            <img src="Tire.png" alt="Tire Image">
+        </div>
+        <div class="tire-right">
+            <img src="Tire.png" alt="Tire Image">
+        </div>
+    </div>
+
+    <div class="popup-container" id="login-error-popup">
+        <div class="popup">
+            <h2>Login Error</h2>
+            <p id="login-error-message">Invalid username or password. Please try again.</p>
+            <button type="button" id="close-login-error-popup">Close</button>
+        </div>
+    </div>
+
+    <!-- Forgot Password Popup -->
+    <div class="popup-container" id="forgot-password-popup">
+        <div class="popup">
+            <h2>Forgot Password</h2>
+            <p>Please enter your email to receive an OTP for password reset.</p>
+            <form id="send-otp-form">
+                <input type="email" id="otp-email" placeholder="Enter your email" required autocomplete="off">
+                <button type="button" id="close-popup">Close</button>
+                <button type="submit">Send OTP</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- OTP Input Popup -->
+    <!-- OTP Input Popup -->
+    <div class="popup-container otp-verification-popup-container" id="otp-verification-popup">
+        <div class="popup otp-verification-popup">
+            <h2>Enter OTP</h2>
+            <p>Please enter the OTP sent to your email.</p> 
+            <div class="failure-mark">❌ Invalid OTP</div>
+            <form id="verify-otp-form">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-box" required autocomplete="off" placeholder="*">
+                    <input type="text" maxlength="1" class="otp-box" required autocomplete="off" placeholder="*">
+                    <input type="text" maxlength="1" class="otp-box" required autocomplete="off" placeholder="*">
+                    <input type="text" maxlength="1" class="otp-box" required autocomplete="off" placeholder="*">
+                    <input type="text" maxlength="1" class="otp-box" required autocomplete="off" placeholder="*">
+                    <input type="text" maxlength="1" class="otp-box" required autocomplete="off" placeholder="*">
+                </div>
+                <button type="button" id="resend-otp-button">Resend OTP</button>
+                <div class="otp-button-container">
+                    <button type="button" id="close-otp-popup">Close</button>
+                    <button type="submit">Verify OTP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Error Popup -->
+    <div class="popup-container" id="error-popup">
+        <div class="popup">
+            <h2>Error</h2>
+            <p id="error-message">Invalid email address.</p>
+            <button type="button" id="close-error-popup">Close</button>
+        </div>
+    </div>
+
+    <div class="popup-container" id="loading-popup">
+        <div class="popup">
+            <p>Sending OTP, please wait...</p>
+            <div class="spinner-wrapper">
+                <div class="loading-spinner"></div>
+            </div>
+            <div class="checkmark">✔️</div>
+            <div class="failure-mark">❌</div>
+        </div>
+    </div>
+
+    <!-- Change Password Popup -->
+    <div class="popup-container" id="change-password-popup">
+        <div class="popup">
+            <h2>Change Password</h2>
+            <form id="change-password-form">
+                <input type="password" id="new-password" placeholder="New Password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <button type="button" id="close-change-password-popup">Close</button>
+                <button type="submit">Change Password</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Login.js"></script>  
+</body>
+</html>

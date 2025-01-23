@@ -1,0 +1,68 @@
+<?php
+date_default_timezone_set('Asia/Manila'); // Set timezone to Manila
+
+// Prevent caching of the response
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "agtechdb";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get the token from the URL
+$token = $_GET['token'];
+
+// Query to fetch job order details using the token
+$query = "SELECT id, service, mechanic, appointment_date, estimate_completion, actual_completion_date, first_name, last_name 
+          FROM job_orders WHERE token = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param('s', $token);
+$stmt->execute();
+$result = $stmt->get_result();
+
+// Check if job order exists
+if ($result->num_rows > 0) {
+    $jobOrder = $result->fetch_assoc();
+    
+    // Check if actual completion date is set and calculate if 5 minutes have passed
+    if (!is_null($jobOrder['actual_completion_date'])) {
+        $currentDate = new DateTime();
+        $completionDate = new DateTime($jobOrder['actual_completion_date']);
+    
+        // Add 5 minutes to the actual completion date to calculate the expiration time
+        $expirationTime = clone $completionDate;
+        $expirationTime->modify('+5 minutes');
+    
+        // Check if the current time is past the expiration time
+        if ($currentDate > $expirationTime) {
+            echo "<p>This progress report link has expired and is no longer accessible.</p>";
+            exit;
+        }
+    }    
+
+    // Fetch parts used for this job order including days_to_deliver
+    $partsQuery = "SELECT part_name, part_quantity, progress, availability, days_to_deliver 
+                   FROM job_order_parts WHERE job_order_id = ?";
+    $partsStmt = $conn->prepare($partsQuery);
+    $partsStmt->bind_param('i', $jobOrder['id']);
+    $partsStmt->execute();
+    $partsResult = $partsStmt->get_result();
+
+    $partsUsed = [];
+    while ($part = $partsResult->fetch_assoc()) {
+        $partsUsed[] = $part;
+    }
+} else {
+    echo "Invalid token or job order not found.";
+    exit;
+}
+
+?>

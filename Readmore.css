@@ -1,0 +1,768 @@
+body {
+    font-family: 'Proxima Nova', serif;
+    margin: 0;
+    padding: 0;
+    background: url('readmore.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+header {
+    background: transparent; /* Keep header background transparent */
+    padding: 20px 0;
+    position: fixed; /* Position it fixed to keep it floating */
+    width: 100%; /* Ensure it covers the full width */
+    z-index: 1000; /* Make sure it's above other content */
+    top: 0; /* Keep it at the top */
+    left: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Stack AG above Tech */
+    text-align: center;     /* Center the text */
+    color: #282959;         /* Dark blue color */
+    font-family: 'Georgia', serif; /* Choose a serif font */
+}
+
+.logo-ag {
+    font-size: 36px;        /* Large font size for "AG" */
+    font-weight: normal;      /* Bold text */
+    margin-bottom: -10px;   /* Slightly reduce the space between AG and Tech */
+}
+
+.logo-tech {
+    font-size: 40px;        /* Slightly smaller font size for "Tech" */
+    font-weight: normal;    /* Normal weight for "Tech" */
+    letter-spacing: -.5px;    /* Adds slight spacing between letters */
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Higher than the overlay */
+    margin-left: 40px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+
+
+.ham-menu span {
+    height: 4px;
+    width: 80%;
+    background-color: #282959;
+    border-radius: 25px;
+    position: absolute;
+    transition: .3s ease;
+}
+
+/* Position each bar */
+.ham-menu span:nth-child(1) {
+    top: 10px; /* Top bar */
+}
+
+.ham-menu span:nth-child(2) {
+    top: 22px; /* Middle bar */
+}
+
+.ham-menu span:nth-child(3) {
+    top: 34px; /* Bottom bar */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 70px; /* Added margin to the right of Diagnostic Tool */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 18px;
+    color: #282959;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #282959;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links li a:hover {
+    color: #282959; /* Red color on hover */
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    background: #f86363; /* Red color on hover */
+}
+/* Header (Red) */
+.off-screen-menu .menu-header {
+    background-color: #B52B2B; /* Red background for the header */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Menu Body (Gray) */
+.off-screen-menu {
+    background-color: #e3e3e3; /* Gray background */
+    height: 100vh; /* Full height of the viewport */
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hides the menu off-screen initially */
+    z-index: 1000;
+    padding: 0;
+    transition: left 0.4s ease; /* Smooth transition when it opens */
+    overflow: hidden;
+}
+
+/* When the menu is active, slide it into view */
+.off-screen-menu.active {
+    left: 0; /* Slide the menu into view */
+    z-index: 1001;
+}
+/* Menu Items */
+.off-screen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.off-screen-menu ul li {
+    margin: 30px 0;
+}
+
+.off-screen-menu ul li a,
+.off-screen-menu .login-item a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #6b6b6b; /* Gray color */
+    transition: color 0.3s ease;
+}
+
+.off-screen-menu ul li a:hover,
+.off-screen-menu ul li a.active,
+.off-screen-menu .login-item a:hover {
+    color: red; /* Red on hover or when active */
+}
+
+/* Position login item at the bottom */
+.off-screen-menu .login-item {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.off-screen-menu .login-item a:hover {
+    color: red;
+}
+.menu-header {
+    background-color: #B52B2B; /* Red background */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    padding: 0 20px;
+    height: 50px;
+    position: relative;
+}
+
+.menu-logo {
+    width: 60px;
+    margin-right: 30px; /* Space between the logo and text */
+}
+
+.menu-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+/* Dark Background Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1000; /* Just below the menu */
+    display: none; /* Initially hidden */
+}
+
+/* Show overlay when active */
+.overlay.active {
+    display: block;
+}
+
+
+/* Info Section Styles */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 200px 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1400px;
+    gap: 20px;
+}
+
+.info-item {
+    position: relative;
+    width: 30%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.info-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top, 
+        rgba(255, 0, 0, 0.663),  /* Red gradient starting from the bottom */
+        rgba(0, 0, 0, 0.3)     /* Darkening overlay from black */
+    );
+    z-index: 1;  /* Ensure the overlay is below the text */
+}
+
+.info-item h2,
+.info-item .line,
+.info-item p,
+.info-item ul {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px; /* Added margin to push text towards the bottom */
+}
+.info-item h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.info-item .line {
+    position: relative;
+    z-index: 2;
+    height: 2px;
+    background: #fff;
+    margin: 0 0;
+}
+
+.info-item p,
+.info-item ul {
+    position: relative;
+    z-index: 2;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.info-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-item ul li {
+    margin-bottom: 5px;
+    font-size: 17px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.info-item ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+.back-button {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    background-color: transparent; /* No background color */
+    border: none; /* Remove default border */
+    padding: 0; /* Remove padding */
+    cursor: pointer;
+    z-index: 1000;
+}
+.back-button-img {
+    width: 70px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.back-button:hover .back-button-img {
+    opacity: 0.8; /* Add a hover effect */
+}
+@media only screen and (max-width: 1280px){
+    .header{
+        background: transparent;
+        padding: 5px 0;
+        position: fixed; 
+        width: 50%; 
+        top: 0; 
+    }
+    .logo-text {
+        margin-right: 280px;
+    }
+    .ham-menu{
+        margin-left: -20px;
+        margin-right: 20px;
+    }
+    .nav-links li:last-child {
+        margin-right: 0; /* Added margin to the right of Diagnostic Tool */
+    }
+    .info-item p, .info-item ul{
+        line-height: 1;
+        text-shadow: 2px 2px #000000a9;
+    }
+    .info-item h2{
+        font-size: 1.5em;
+        text-shadow: 2px 2px #000000a9;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    .nav{
+        width: 1000px;
+        padding-left: 10px;
+    }
+    .logo-text {
+        margin-right: 80px; /* Adjust spacing between the menu and text */
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .nav-links li a{
+        font-size: 15px;
+    }
+    .logo-ag{
+        font-size: 30px;
+    }
+    .logo-tech{
+        font-size: 30px;
+    }
+    .ham-menu{
+        height: 40px;
+        width: 35px;
+    }
+
+    .info-box{
+        gap: 10px;
+    }
+    .info-item{
+        padding: 30px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .logo-ag{
+        font-size: 18px;
+    }
+    .logo-tech{
+        font-size: 18px;
+    }
+    .logo-text{
+        font-size: 12px;
+        margin-left: 0px;
+        margin-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .nav-links li a{
+        font-size: 11px;
+    }
+    .nav-links li{
+        margin: 0 10px;
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+    .ham-menu{
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        margin-right: 10px;
+    }   
+
+    .info-item{
+        width: 80%;
+        padding: 20px;
+        margin: 0 0;
+    }
+    .info-box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .logo-ag{
+        font-size: 17px;
+        font-weight: 800px
+    }
+    .logo-tech{
+        font-size: 17px;
+        font-weight: 800px
+    }
+    .logo-text{
+        font-size: 10px;
+        margin-left: 0px;
+        margin-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .nav-links li a{
+        font-size: 10px;
+    }
+    .nav-links li{
+        margin: 0 8px;
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+    .ham-menu{
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .off-screen-menu{
+        width: 30%;
+    }
+    .off-screen-menu ul{
+        font-size: 18px;
+    }
+    .info-box{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .info-item{
+        padding: 20px;
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 380px){
+    .logo-ag{
+        font-size: 15px;
+    }
+    .logo-tech{
+        font-size: 15px;
+    }
+    .logo-text{
+        margin-right: 10px;
+    }
+
+    .ham-menu{
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+    }
+    .off-screen-menu{
+        width: 30%;
+    }
+    .off-screen-menu ul{
+        font-size: 18px;
+    }
+
+    .nav-links li{
+        margin: 0 5px;
+    }
+    .nav-links li a{
+        font-size: 8px;
+    }
+    
+}
+@keyframes zoomFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Start slightly smaller */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Scale to normal size */
+    }
+}
+
+/* Apply the new zoom and fade-in animation */
+.info-item {
+    opacity: 0; /* Initially hidden */
+    animation: zoomFadeIn 0.8s ease forwards;
+}
+@media only screen and (max-width: 1650px){
+    .logo-text {
+        margin-right: 450px;
+    }
+}
+@media only screen and (max-width: 1280px){
+    
+    .header{
+        background: transparent;
+        padding: 5px 0;
+        position: fixed; 
+        width: 50%; 
+        top: 0; 
+    }
+    .logo-text {
+        margin-right: 280px;
+    }
+    .ham-menu{
+        margin-left: -20px;
+        margin-right: 20px;
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+
+    .info-item p, .info-item ul{
+        line-height: 1;
+        text-shadow: 2px 2px #000000a9;
+    }
+    .info-item h2{
+        font-size: 1.5em;
+        text-shadow: 2px 2px #000000a9;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    .nav{
+        width: 1000px;
+        padding-left: 10px;
+    }
+    .logo-text {
+        margin-right: 80px; /* Adjust spacing between the menu and text */
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .nav-links li a{
+        font-size: 15px;
+    }
+    .logo-ag{
+        font-size: 30px;
+    }
+    .logo-tech{
+        font-size: 30px;
+    }
+    .ham-menu{
+        height: 40px;
+        width: 35px;
+    }
+
+    .info-box{
+        gap: 10px;
+    }
+    .info-item{
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    nav{
+        width: 95%;
+    }
+    .logo-ag{
+        font-size: 25px;
+    }
+    .logo-tech{
+        font-size: 25px;
+    }
+    .nav-links li{
+        margin: 0 10px;
+    }
+    .ham-menu{
+        margin-left: 20px;
+    }
+    .info-box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info-item{
+        width: 80%;
+        padding: 20px;
+        margin: 0 0;
+    }
+}
+@media only screen and (max-width: 600px){
+    .logo-ag{
+        font-size: 18px;
+    }
+    .logo-tech{
+        font-size: 18px;
+    }
+    .logo-text{
+        font-size: 12px;
+        margin-left: 0px;
+        margin-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .nav-links li a{
+        font-size: 11px;
+    }
+    .nav-links li{
+        margin: 0 10px;
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+    .ham-menu{
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        margin-right: 10px;
+    }   
+
+}
+
+@media only screen and (max-width: 450px){
+    .logo-ag{
+        font-size: 17px;
+        font-weight: 800px
+    }
+    .logo-tech{
+        font-size: 17px;
+        font-weight: 800px
+    }
+    .logo-text{
+        font-size: 10px;
+        margin-left: 0px;
+        margin-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .nav-links li a{
+        font-size: 10px;
+    }
+    .nav-links li{
+        margin: 0 8px;
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+    .ham-menu{
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .off-screen-menu{
+        width: 30%;
+    }
+    .off-screen-menu ul{
+        font-size: 18px;
+    }
+
+    .back-button{
+        font-size: 12px;
+    }
+    .info-box{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .info-item{
+        padding: 20px;
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 380px){
+    .logo-ag{
+        font-size: 15px;
+    }
+    .logo-tech{
+        font-size: 15px;
+    }
+    .logo-text{
+        margin-right: 10px;
+    }
+
+    .ham-menu{
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+    }
+    .off-screen-menu{
+        width: 30%;
+    }
+    .off-screen-menu ul{
+        font-size: 18px;
+    }
+
+    .nav-links li{
+        margin: 0 5px;
+    }
+    .nav-links li a{
+        font-size: 8px;
+    }
+    
+}

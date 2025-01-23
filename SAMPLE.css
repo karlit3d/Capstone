@@ -1,0 +1,829 @@
+/* home.css */
+
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+header {
+    background: transparent; /* Keep header background transparent */
+    padding: 20px 0;
+    position: fixed; /* Position it fixed to keep it floating */
+    width: 100%; /* Ensure it covers the full width */
+    z-index: 1000; /* Make sure it's above other content */
+    top: 0; /* Keep it at the top */
+    left: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Stack AG above Tech */
+    align-items: center; /* Center the text horizontally */
+    margin-right: 950px; /* Adjust spacing between the menu and text */
+    line-height: 1; /* Ensure there's no extra space between AG and Tech */
+    color: darkred;
+}
+
+.logo-ag {
+    font-family: 'Lora', serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.logo-tech {
+    font-family: 'Lora', serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100; /* Ensure it stays on top */
+    border-radius: 5px; /* Optional: Add some rounding for a button-like appearance */
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: darkred;
+    border-radius: 25px;
+    position: absolute;
+    transition: .3s ease;
+}
+
+.ham-menu.active span {
+    background-color: darkred; /* Change color to ensure visibility when active */
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+
+.ham-menu span:nth-child(2){
+    top: 50%;
+}
+
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 70px; /* Added margin to the right of Diagnostic Tool */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 18px;
+    color: darkred;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links li a:hover {
+    color: #f86363; /* Red color on hover */
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    background: #f86363; /* Red color on hover */
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+    background-color: white;
+    height: 100%;
+    width: 15%;
+    max-width: 450px;
+    position: fixed;
+    top: 20px; /* Add margin from the top */
+    left: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Change to flex-start to align items to the top */
+    padding-top: 40px; /* Add padding to position the menu items */
+    align-items: left;
+    text-align: left;
+    font-size: 24px;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.off-screen-menu ul {
+    padding-left: 20px; /* Add padding to align items properly */
+}
+
+.off-screen-menu ul li {
+    list-style: none;
+    margin: 20px 0; /* Adjust margin to space out items */
+}
+
+.off-screen-menu ul li a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: bold;
+    position: relative;
+}
+
+.off-screen-menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.off-screen-menu ul li a:hover {
+    color: #f86363; /* Red color on hover */
+}
+
+.off-screen-menu ul li a:hover::after{
+    width: 100%;
+    background: #f86363; /* Red color on hover */
+}
+
+.off-screen-menu.active {
+    left: 0;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.carousel-item.active {
+    display: flex;
+    opacity: 1;
+}
+
+.carousel-item.blink {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.carousel-image {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    margin-right: 12%;
+    margin-top: 5%;
+}
+
+.carousel-image.car2 {
+    width: 55%;
+    height: 100%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.carousel-image.car3 {
+    width: 50%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+.overlay {
+    position: absolute;
+    top: 45%;
+    left: 7%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+}
+
+.overlay h1 {
+    font-size: 4em;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.learn-more .arrow-right {
+    margin-bottom: 3px;
+    margin-left: 10px;
+    font-size: 1.4em;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 4em;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Contact Icons */
+.contact-icons {
+    position: absolute;
+    bottom: 50px; /* Adjust this value as needed */
+    left: 150px; /* Adjust this value as needed */
+    display: flex; /* Align icons side by side */
+    gap: 20px; /* Space between icons */
+    z-index: 1001; /* Ensure it appears above other elements */
+}
+
+.icon-link {
+    display: inline-block;
+}
+
+.contact-icon {
+    cursor: pointer;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    transition: transform 0.2s ease;
+}
+
+/* Specific icon sizes */
+.phone-icon {
+    width: 40px; /* Set width for phone icon */
+    height: 40px; /* Set height for phone icon */
+}
+
+.facebook-icon {
+    width: 40px; /* Set width for Facebook icon */
+    height: 40px; /* Set height for Facebook icon */
+}
+
+.email-icon {
+    width: 40px; /* Set width for email icon */
+    height: 40px; /* Set height for email icon */
+}
+
+.mobile-menu.show {
+    display: flex;
+}
+.hero-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: position 0.3s ease-in-out;
+}
+.hero {
+    position: relative;
+    padding-top: 90px;
+    background: url('ABOUT.png') no-repeat center center fixed; /* Add your background image here */
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.hero-header .nav-links li a {
+    color: #000; 
+}
+
+.hero-header .logo-text {
+    color: #000; 
+}
+
+.hero.in-view .hero-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hero .carousel, .hero .overlay, .hero .arrow {
+    margin-top: 60px;
+}
+
+.hero .info-box {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding-bottom: 100px;
+}
+
+.hero .info-box .info-item {
+    display: flex;
+    align-items: center;
+    text-align: left; 
+    margin-top: 0px; /* Reduce or remove top margin to bring items closer together */
+    gap: 10px;
+}
+
+.hero .info-box .info-item img {
+    width: 110px; /* Adjust as needed */
+    height: 120px; /* Adjust as needed */
+    margin-right: 10px;
+    margin-top: 80px;
+
+}
+
+.hero .info-box .info-item h3 {
+    font-weight: 700;
+    color: #282959;
+    font-size: 32px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 80px;
+}
+
+.hero .info-box .info-item p {
+    font-size: 16px;
+    color: #656565;
+    letter-spacing: 0.14em;
+    margin: 0;
+}
+
+.hero .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.hero .hero-content .hero-text {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.hero .hero-content .hero-text h1 {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight:700;
+    font-size: 36px;
+    color: #282959;
+    margin: 0; /* Remove margin to bring it closer to the h2 */
+    line-height: 1.2; /* Adjust line-height to reduce space between lines */
+}
+
+.hero .hero-content .hero-text h1 .highlight {
+    color: #EE0B0B; /* Red color for AG TECH */
+}
+
+.hero .hero-content .hero-text h2 {
+    font-family: 'Proxima Nova', sans-serif;;
+    font-weight:700;
+    font-size: 24px;
+    color: #FF0B0B;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.hero .hero-content .hero-text p {
+    font-size: 20px;
+    color: #373737;
+    line-height: 1.5;
+    margin-right: 200px;
+    text-align: justify;
+}
+
+.hero .hero-content .btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: #EE0B0B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 39px;
+    text-decoration: none;
+}
+
+.hero .hero-content .hero-image {
+    flex: 1;
+}
+
+.hero .hero-content .hero-image img {
+    width: 80%;
+    height: auto;
+    margin-left: 200px;
+}
+.overlay-text {
+    position: absolute;
+    top: 375px; /* Adjust the position of the text */
+    right: 945px; /* Adjust the position of the text */
+    color: white;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background for better readability */
+    padding: 30px; /* Padding around the text */
+}
+
+.overlay-text h3 {
+    font-size: 24px; /* Adjust the size of the heading */
+    margin: 0;
+    font-weight: bold;
+}
+
+.overlay-text p {
+    font-size: 24px; /* Adjust the size of the paragraph */
+    margin: 5px 0 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sub - header within the services Section */
+.services-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: position 0.3s ease-in-out;
+}
+.services {
+    position: relative;
+    padding-top: 90px;
+    background: url('SERVICE.png') no-repeat center center fixed; /* Add your background image here */
+    background-size: cover;
+    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+}
+
+.services-header .nav-links li a {
+    color: #000; 
+}
+
+.services-header .logo-text {
+    color: #000; 
+}
+
+.services.in-view .hero-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.services .carousel, .hero .overlay, .hero .arrow {
+    margin-top: 60px;
+}
+
+.services h2 {
+    font-family:  'Proxima Nova', sans-serif;
+    font-size: 30px;
+    color: #FF0B0B;
+    font-weight: 700;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+.services h1 {
+    font-family:  'Proxima Nova', sans-serif;
+    font-size: 40px;
+    color: #282959;
+    font-weight:750;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    margin-left: 150px;
+}
+
+.services-container {
+    display: flex;
+}
+
+.services-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    max-width: 400px;
+}
+
+.service-button {
+    background: #E8E8E8;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 40px; /* Adjusted padding to reduce space */
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #282959;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex; /* Allows for icons and text to be aligned */
+    align-items: center; /* Vertically center the icon and text */
+    width: 100%; /* Make sure the button takes up the full width of the container */
+    box-sizing: border-box;
+}
+
+.service-button img {
+    color:black;
+    margin-right: 15px; /* Space between icon and text */
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px; /* Adjust the size of the icon */
+}
+
+.service-button.active,
+.service-button:hover {
+    background: #FF0B0B;
+    color: #fff;
+}
+
+
+.service-content {
+    flex: 2;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.service-content img {
+    height: 470px;
+    width: 600px;
+    display: block;
+    margin-right: 20px;
+    margin-bottom: 200px;
+}
+
+.service-content h3 {
+    font-size: 40px;
+    color: #282959;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+
+.service-content p {
+    font-size: 28px;
+    margin: 0px 10px;
+    color: #373737;
+    line-height: 2.5;
+    margin-bottom: 70px;
+
+}
+
+.book-now {
+    background: #EE0B0B;
+    color: #fff;
+    border: none;
+    padding: 20px 80px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+.book-now:hover {
+    background: #FF5C5C;
+}
+
+.stats-section {
+    text-align: center;
+    background: rgba(44, 44, 44, 0.17);
+    background-image: url('footerbg.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+
+}
+
+.stats-box {
+    display: flex;
+    justify-content: center; /* Evenly space the items */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the box */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 110px;
+}
+
+.stats-item {
+    flex: 1;
+    margin: 30px;
+    text-align: center;
+}
+
+.stats-item h2 {
+    font-size: 48px;
+    color: white;
+    margin: 0; /* Remove margin between h2 and p */
+    font-weight: 700;
+}
+
+.stats-item p {
+    font-family:  'Proxima Nova', sans-serif;
+    font-size: 18px; /* Adjust the font size if necessary */
+    font-weight: bold;
+    color: white;
+    margin-top: 0; /* Ensure no margin above the paragraph */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide any overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if the text overflows */
+}
+
+.stats-icon {
+    width: 60px;
+    height: 60px;
+}
+@media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+    .nav-links li a {
+        text-decoration: none;
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 12px;
+        color: darkred;
+        font-weight: bold;
+        position: relative;
+        margin-right: 1000px;
+    }
+    
+    .ham-menu {
+        display: flex;
+    }
+    .logo-text {
+        display: flex;
+        flex-direction: column; /* Stack AG above Tech */
+        align-items: center; /* Center the text horizontally */
+        margin-right: 1120px; /* Adjust spacing between the menu and text */
+        line-height: 1; /* Ensure there's no extra space between AG and Tech */
+        color: darkred;
+    }
+
+    .hero .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .hero-content .hero-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero .hero-content .hero-image {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero .info-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .overlay-text {
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: auto;
+        bottom: 10%;
+        text-align: center;
+    }
+
+    .service-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-menu {
+        margin-left: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .overlay h1 {
+        font-size: 2em;
+    }
+
+    .learn-more {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    .arrow {
+        font-size: 2em;
+    }
+
+    .contact-icons {
+        left: 50px;
+        bottom: 20px;
+    }
+
+    .stats-item h2 {
+        font-size: 36px;
+    }
+
+    .stats-item p {
+        font-size: 14px;
+    }
+
+    .stats-box {
+        gap: 50px;
+    }
+}

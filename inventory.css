@@ -1,0 +1,1521 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFBFB;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    
+}
+.header-left h1 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #282959;
+    letter-spacing: -1px;
+    
+}
+.header-left h2 {
+
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: red;
+    letter-spacing: -1px;
+    
+}
+.header-left .nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: 450px;
+}
+
+.header-left .nav-item {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border: 1px solid #80808A; /* Default border */
+    color: #80808A; /* Default text color */
+}
+
+/* Style for active nav item */
+.header-left .nav-item.active {
+    background-color: #E3DCDC;
+    color: #E15E5E;
+    border: none; /* Remove border for active */
+}
+
+.header-left .nav-item.inactive {
+    border: 1px solid #80808A;
+    color: #80808A;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right p {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #80808A;
+    margin-right: 10px;
+}
+.header-right .profile-pic {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-image: url('profile_icon.png');
+    background-size: cover;
+    margin-right: 102px;
+}
+
+/* Main Sidebar Container */
+.sidebar {
+    position: absolute;  
+    top: 190px;
+    left: 25px;
+    height: 1928px;
+    padding: 19px;
+    width: 220px;
+    background-color: #F2F2F2;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.sidebar h3{
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    color: #6F6F77;
+    font-size: 13px;
+}
+/* Ensure the right content stays aligned */
+.inventory-content {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+.filter-group{
+    margin-bottom: 1rem;
+}
+/* Product Status Section */
+.status-filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-filters button { 
+    background-color: #fff;
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+    padding: 0.7rem 1rem; 
+    border-radius: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.status-filters button.active {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.status-filters button span {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* Dropdown for Category Filter */
+#categoryFilter {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    font-weight: bold;
+    color: gray;
+}
+#brandFilter {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    font-weight: bold;
+    color: gray;
+}
+/* Product Type Toggle Buttons */
+.typeFilter {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    color: gray;
+  }
+  .typeFilter.active {
+    border-color:  #e74c3c;
+    background-color: white;
+    color: #e74c3c;
+  }
+
+/* Price Inputs */
+.price-group {
+    margin-bottom: 30px;
+}
+
+.price-group input {
+    width: 85%;
+    padding: 1rem;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+    background-color: #D9D9D9;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #737373;
+}
+
+/* Apply and Reset Buttons */
+button.apply-filters-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: .7rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: -30px;
+    font-weight: bold;
+    text-align: center;
+}
+button.apply-filters-btn:hover{
+    background-color: #a74646;
+}
+
+button.reset-filters-btn {
+    background-color: #bdc3c7;
+    color: #fff;
+    border: none;
+    padding: .7rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#paginationControls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+#editProductType {
+    font-weight: normal; /* Default weight */
+}
+
+#editProductType.option-bold {
+    font-weight: bold;
+}
+
+.page-button:hover {
+    background-color: #e74c3c;
+}
+
+.page-button.active {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+.page-button.prev, .page-button.next {
+    font-weight: bold;
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.page-button.prev:hover, .page-button.next:hover {
+    background-color: #e74c3c;
+}
+
+/* Disabled styling */
+.page-button:disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+
+/* Ensure Sidebar Stays in Position */
+
+
+/* Adjust the rest of the layout to stay within the sidebar's space */
+.main-content {
+    padding: 2rem;
+    margin-top: 70px; /* Adjust based on header height */
+    width: calc(100% - 150px);
+    overflow-y: auto;
+    margin-left: 20px; /* To ensure enough space for the sidebar */
+}
+.details-button {
+    color: black; /* White text */
+    border: 2px solid gray; /* Blue border */
+    padding: 5px 10px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+
+}
+
+.details-button:hover {
+    background-color: #E15E5E; /* Darker blue on hover */
+    border-color: gray; /* Darker border on hover */
+}
+
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    button.apply-filters-btn,
+    button.reset-filters-btn {
+        padding: 0.5rem;
+    }
+}
+/* Main Content Styles */
+
+.main-content h1{
+    font-family: 'Proxima Nova', sans-serif;
+    color: #3A3B66;
+    font-weight:900;
+    
+}
+.search-bar {
+    display: flex;
+    margin-bottom: 2rem;
+    margin-left: 250px;
+   
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 1rem;
+    border: 2.5px solid #7780A5;
+    border-radius: 15px;
+    margin-right: 1rem;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 50px;
+}
+
+.search-button {
+    background-color: #e74c3c;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    margin-right: 70px;
+    color: #80808A;
+    font-weight: 600;
+    
+}
+
+/* Product item layout */
+.product-item {
+    display: flex;
+    justify-content: space-between; /* Keeps the prices on the right */
+    align-items: center;
+    background-color: #F1F1F1;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.256);
+    width: 100%;
+}
+
+/* Image only on the left */
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Product information in the middle */
+.product-info {
+    flex: 1; /* Occupy the space between the image and the prices */
+    display: flex;
+    flex-direction: column; /* Stack product name and details */
+    align-items: flex-start; /* Align to the left of the middle column */
+    margin-left: 25px;
+}
+
+.product-type{
+    color: #3A3B66;
+    margin-right: 100px;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: -.5px;
+}
+/* Product name */
+.product-info h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+    color: #3A3B66;
+}
+
+/* Category, type, and stock inline */
+.inline-details {
+    font-size: 17px;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+}
+
+/* Prices on the right */
+.product-prices {
+    display: flex; /* Make the container a flex container */
+    justify-content: space-between; /* Space out the items */
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 700;
+    text-align: flex-start;
+
+}
+.Tprice {
+    color: gray; /* Gray color for the original price text */
+    display: flex;
+    flex-direction: column; /* Stack the contents vertically */
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 700;
+    margin-right: 80px;
+
+}
+
+.price {
+    margin-top: 30px;
+    color: #3A3B66; /* Blue color for the original price value */
+    font-size: 25px;
+    text-align: left;
+}
+
+
+.add-button {
+    background-color: #e74c3c;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    white-space: nowrap;
+    color: #fff;
+    border: none;
+    padding: 0rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.add-button:hover {
+    background-color: #a74646;
+}
+.bulk-restock-button {
+    background-color: #e74c3c;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    color: #fff;
+    border: none;
+    padding: 0rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px; /* Adds space between the buttons */
+    margin-right: 10px;
+}
+
+.bulk-restock-button:hover {
+    background-color: #a74646; /* Darker color on hover */
+}
+/* Bulk Restock Popup Overlay */
+.bulk-restock-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Bulk Restock Popup Content */
+.bulk-restock-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.bulk-restock-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.bulk-restock-popup-title {
+    font-size: 24px;
+    font-family: 'Proxima Nova', sans-serif;
+    color: #3A3B66;
+    font-weight: 900;
+    margin-left: 20px;
+}
+
+.popup-close-button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 45px; /* Fixed width */
+    height: 45px; /* Fixed height */
+    border-radius: 50%; /* Makes it circular */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+.popup-close-button:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Search Bar */
+.popup-search {
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+.popup-search input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.bulk-restock-add-part-button {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* Parts Table */
+.popup-parts-table {
+    border: 1px solid #333;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 20px;
+    height: 60%;
+}
+
+.table-header, .table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.table-header span {
+    flex: 1;
+    text-align: center;
+}
+
+.table-row span, .table-row input {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.table-row input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+.table-row input.bulk-restock-quantity-input {
+    padding: 2px; /* Reduce padding to make it more compact */
+    font-size: 14px; /* Optional: Adjust font size if necessary */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* Confirm Button */
+.popup-confirm-button {
+    background-color: #3A3B66;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;    
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 810px;
+}
+
+.popup-confirm-button:hover {
+    background-color: #2d2e68;
+}
+
+/* Hide popup by default */
+/* Dropdown for search results */
+.bulk-restock-dropdown {
+    position: absolute;
+    top: 100%; /* Position it directly below the search input */
+    left: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 62%; /* Match width of search input */
+    z-index: 1000;
+    padding: 5px 0; /* Add some padding for dropdown items */
+}
+
+.bulk-restock-dropdown-item {
+    text-align: left;
+    font-weight: bold;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.bulk-restock-dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.bulk-restock-dropdown-hidden {
+    display: none;
+}
+.remove-part-button {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    width: 24px; /* Fixed width */
+    height: 24px;
+}
+
+.remove-part-button:hover {
+    background-color: #c0392b;
+}
+
+.generate-report-button {
+    background-color: #e74c3c;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    color: #fff;
+    border: none;
+    padding: 0rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.generate-report-button:hover {
+    background-color: #a74646;
+}
+.generate-report-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.generate-report-popup-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    height: 700px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.report-heading {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: #3A3B66;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.generate-report-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.generate-report-header select {
+    margin-right: 40px;
+    margin-left: 60px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 7px;
+}
+.generate-report-header input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+.generate-report-header label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3A3B66;
+    margin-right: 5px;
+}
+.generate-report-body {
+    margin-left: 30px;
+    margin-top: 10px;   
+    width: 90%;
+    height: 70%; /* Adjust height for the content area */
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.close-report-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #fff;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;    
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border-radius: 50%;
+    background-color: red;
+}
+#generateReportSubmit {
+    background-color: #e74c3c; /* Green background */
+    color: white; /* White text */ 
+    padding: 10px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin-left: 20px;
+}
+#printReportButton {
+    background-color: #3A3B66; /* Green background */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold;
+    padding: 10px 20px; /* Padding for spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    margin-top: 10px;
+    margin-left: 780px;
+}
+.hidden {
+    display: none;
+}
+
+/* Custom square radio buttons */
+.status-label input[type="radio"] {
+    display: none;
+}
+
+.status-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.status-label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2c3e50;
+    margin-right: 10px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.status-label input[type="radio"]:checked + span:before {
+    background-color: #2c3e50;
+}
+
+.status-label span {
+    font-size: 1rem;
+}
+.apply-filters-btn {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.reset-filters-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Popup Container Styling */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: white;
+    width: 900px;
+    height: 750px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-body {
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.product-info, .stock-info {
+    width: 45%;
+}
+
+.product-info p, .stock-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.stock-info {
+    background-color: rgb(243, 242, 242); /* Background color */
+    text-align: center; /* Center text inside the container */
+    width: 25%; /* Reduce width (you can adjust this value) */
+    height: 80%;
+    border: 10px solid;
+    border-color: rgb(231, 231, 231);
+    margin: 0 auto; /* Center the box horizontally */
+    padding: 20px; /* Add padding for spacing inside the box */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-right: 50px;
+    margin-top: 40px;
+}
+.stock-info h4 {
+    font-size: 14px; /* Size of the heading */
+    font-weight: 800; /* Make the heading bold */
+    color: gray; /* Text color for contrast against the background */
+    margin: 10px 0; /* Space above and below the heading */
+    text-align: center; /* Center the heading text */
+    text-transform: uppercase; /* Optional: make the text uppercase */
+}
+.stock-info h1 {
+    font-size: 36px; /* Font size for the quantity */
+    margin: 10px 0; /* Space above and below */
+    color: #3A3B66; /* Ensure text color contrasts with the background */
+}
+.stock-info {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Align to the left */
+    margin-bottom: 10px; /* Add some space between elements */
+}
+
+.stock-display {
+    font-size: 36px;
+    font-weight: 700;
+    color: #3A3B66;
+    margin-bottom: 5px; /* Space below the stock display */
+}
+.stock-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.stock-input {
+    padding: 5px;
+    font-size: 34px;
+    border-radius: 10px;
+    align-items: center;
+    color: #3A3B66;
+
+}
+
+.adjust-stock {
+    background-color: rgb(243, 242, 242);
+    color: #ff6b6b;
+    border: 2px solid #ff6b6b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 12px;
+}
+.adjust-stock:hover {
+    background-color: #ff6b6b; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Pop Up*/
+/* Popup Header */
+.popup-header {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    margin-left: 40px;
+}
+
+/* Button Wrapper */
+.button-wrapper {
+    display: flex; /* Align buttons side by side */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Popup Action Buttons */
+.popup-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup-actions button {
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Popup Status Toggle Button Styles */
+.status-toggle {
+    height: 40px;
+    margin-top: 1px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.toggle-popup-status-button {
+    padding: 10px 15px;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.toggle-popup-status-button.active {
+    background-color: white;/* Green for active */
+    color: #ff6b6b;
+}
+
+.toggle-popup-status-button.inactive {
+    background-color: white; /* Red for inactive */
+    color: #4caf50;
+}
+
+.toggle-popup-status-button.inactive:hover {
+    background-color: #4caf50; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.toggle-popup-status-button.active:hover {
+    background-color: #ff6b6b; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+.toggle-popup-status-button.disabled {
+    background-color: #ccc; /* Disabled state color */
+    color: #666; /* Text color for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+    opacity: 0.7; /* Optional: make it look faded */
+    border: 2px solid #272727;
+}
+/* Popup Action Buttons */
+.edit-button {
+    width: 85px;
+    background-color: white; /* Button background */
+    color: #ff6b6b; /* Button text color */
+    padding: 2px 2px;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.edit-button:hover{
+    background-color: #ff6b6b; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+button.disabled {
+    background-color: #ccc; /* Light gray background */
+    color: #666; /* Darker gray text */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+    pointer-events: none; /* Prevent any interactions */
+    border-color:#272727;
+}
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 40px; /* Adjust margin as needed */
+}
+
+/* Save button styles */
+.save-details {
+    height: 40px;
+    width:85px;
+    background-color: white; /* Success color */
+    color: #ff6b6b;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 15px;
+    display: none; /* Hidden initially */
+    cursor: pointer;
+}
+.save-details.disabled {
+    background-color: #ccc; /* Gray background */
+    color: #666; /* Darker gray text */
+    cursor: not-allowed; /* Not-allowed cursor */
+    opacity: 0.6; /* Slightly transparent */
+}
+
+.save-details:hover {
+    background-color: #ff6b6b; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+.save-details:hover:not(.disabled) {
+    background-color: #ff6b6b; /* Darker shade for hover effect */
+}
+.cancel-button {
+    height: 40px;
+    width: 85px;
+    background-color: white; /* Success color */
+    color: #ff6b6b;
+    border: 2px solid #ff6b6b; /* Border color to match text color */
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 600px;
+    display: none; /* Hidden initially */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.cancel-button:hover {
+    background-color: #ff6b6b; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+/* Close button styles */
+.close-popup {
+    background-color: red; /* Background color for the button */
+    color: #fff; /* White color for the "X" */
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    border-radius: 50%; /* Makes it circular */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0; /* Remove padding for a perfect circle */
+    margin-left: -40px;
+    margin-top: -10px;
+}
+
+.popup-product-info {
+    margin-top: 5px; /* Optional: space above the product info section */
+}
+.popup-content h3 {
+    font-size: 28px; /* Size of the product name */
+    font-weight: 900; /* Bold font for emphasis */
+    margin: 10px 0; /* Space above and below */
+    color: #3A3B66; /* Dark color for readability */
+    margin-left: 40px;
+}
+.popup-content p {
+    font-size: 18px; /* Size for category and brand */
+    font-weight: 800;
+    color: #666; /* Gray color for secondary text */
+    margin: 5px 0; /* Space above and below */
+    margin-left: 40px;
+}
+.popup-product-info h4 {
+    font-size: 24px; /* Size for product info heading */
+    font-weight: 900; /* Bold for emphasis */
+    margin-top: 30px; /* Space above */
+    margin-bottom: 30px; /* Space below */
+    color: #3A3B66; /* Dark color for readability */
+}
+.info-row {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between label and value */
+    margin-bottom: 8px; /* Space between rows */
+}
+
+.info-row strong {
+    flex: 0 0 350px; /* Allow label to take equal space */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-size: 18px;
+    font-weight: 800;
+    color: #666;
+    margin: 5px;
+}
+
+.info-row span {
+    flex: 2; /* Allow value to take more space */
+    text-align: left; /* Align text to the right */
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+    margin: 5px;
+}
+
+/* POP UP */
+
+.filters-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+}
+
+.status-button {
+    padding: 10px 18px;
+    margin: 5px 0; /* Vertical margin for spacing */
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: lightgray; /* Default background */
+    width: 100%; /* Full width for the "All" button */
+    text-align: left; /* Align text to the left */
+    border: none; /* Remove border by default */
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+
+.status-button[aria-pressed="true"] {
+    background-color: #f9f9f9; /* Active background */
+    color: #e74c3c;
+    border: 1px solid #e74c3c; /* Border for the active button */
+}
+
+.status-button:hover {
+    background-color: #ffff; /* Hover effect */
+}
+
+/* Container for the Active and Inactive buttons */
+.status-group {
+    display: flex; /* Align buttons horizontally */
+    width: 100%; /* Full width */
+    margin-top: 5px; /* Space between All and the group */
+    gap: 10px;
+}
+
+.status-button.active {
+    margin-right: 5px; /* Space between Active and Inactive buttons */
+}
+
+/* Sort By Dropdown */
+#sortBy {
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: gray;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#sortBy:hover {
+    border-color: #888;
+}
+
+#sortBy:focus {
+    outline: none;
+    border-color: black;
+}
+/* ADD PRODUCT POPUP START*/
+/* Popup Styles */
+/* Popup Styles */
+/* Popup Container */
+.add-product-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Flexbox to center the content */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures popup is above other content */
+    display: none; /* Hidden by default, will be shown via JavaScript */
+}
+
+/* Popup Content */
+.add-product-content {
+    background-color: white;
+    width: 900px;
+    height: 850px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.add-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.add-product-header img {
+    cursor: pointer;
+    width: 40px; /* Fixed width for close icon */
+    height: auto; /* Maintain aspect ratio */
+    display: none;
+}
+
+/* Body Section */
+.add-product-body {
+    margin-top: 10px;
+    flex-grow: 1; /* Allow body to grow */
+}
+
+/* Product Info Section */
+.add-product-info {
+    margin-bottom: 15px;
+}
+
+.add-product-info-row {
+    margin-bottom: 10px;
+    display: flex; /* Use flex to align label and input */
+    justify-content: LEFT; /* Space between label and input */
+    align-items: center; /* Center vertically */
+}
+
+/* Labels */
+.add-product-info-row strong {
+    flex-basis: 30%; /* Allocate space for labels */
+    font-weight: bold;
+    color: #666; /* Dark color for better readability */
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+/* Input Fields */
+.add-input {
+    flex-basis: 65%; /* Allocate space for inputs */
+    padding: 10px; /* Add padding for comfort */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    margin-right: 40px;
+    margin-top: 5px;
+}
+
+/* Select Dropdown */
+#addProductStatus {
+    flex-basis: 67.5%; /* Same space allocation for select */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; 
+    margin-right: 40px;
+    margin-top: 5px;
+    color:gray
+}
+
+#addProductType{
+    flex-basis: 67.5%; /* Same space allocation for select */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 40px;
+    margin-top: 5px;
+    color:gray
+}
+
+/* Buttons Section */
+.add-product-buttons {
+    display: flex;
+    gap: 20px;
+    margin-left: 680px;
+}
+
+.cancel-add-product,
+.save-add-product {
+    padding: 10px;
+    background-color: white; /* Primary button color */
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    height: 40px;
+    width: 85px; /* Each button takes half of the available width */
+    font-size: 16px; /* Increase font size for readability */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.cancel-add-product:hover,
+.save-add-product:hover {
+    background-color: #e74c3c; /* Darker shade on hover */
+    color: white;
+}
+.save-add-product:disabled {
+    background-color: #ccc; /* Gray background */
+    color: #666; /* Darker gray text */
+    cursor: not-allowed; /* Not-allowed cursor */
+    opacity: 0.6; /* Slightly transparent */
+    border: 2px solid #272727;
+}
+/* Optional - Adding focus styles for accessibility */
+.add-input:focus,
+#addProductStatus:focus {
+    outline: none; /* Remove default outline */
+    border-color: #e74c3c; /* Change border color on focus */
+}
+.add-product-header h3 {
+    font-size: 24px; /* Size for main heading */
+    color: #3A3B66; /* Dark color for better readability */
+    flex-grow: 1; /* Allow the heading to take up available space */
+    margin: 0; /* Remove default margin */
+    font-weight: 900;
+}
+
+/* Product Information Section Heading */
+.add-product-body h4 {
+    font-size: 20px; /* Size for section heading */
+    color: #3A3B66; /* Primary color for section headings */
+    margin-bottom: 10px; /* Space below the heading */
+    margin-left: 20px;
+    font-weight: 800;
+}
+.required {
+    color: #666; /* Red color for the required indicator */
+    margin-left: 5px; /* Spacing between the label and the asterisk */
+}
+/* ADD PRODUCT POPUP END*/
+.completion-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduce space between Days and Hours */
+}
+
+.completion-field {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduce space between label and input */
+    margin-top: 10px;
+}
+
+.completion-field label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 2px; /* Fine-tune spacing between label and input */
+}
+
+.completion-field input {
+    width: 50px; /* Adjust width for compactness */
+    padding: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+.completions-container {
+    display: flex; /* Make the container flexbox */
+    gap: 10px; /* Add space between "days" and "hours" */
+    align-items: center; /* Align the items vertically */
+}
+
+.completion-item {
+    display: flex; /* Ensure items are inline-flex */
+    align-items: baseline; /* Align the number and text */
+    gap: 0px; /* Add space between number and unit (e.g., days/hours) */
+}
+
+.editables {
+    font-weight: bold; /* Make the numbers bold */
+    font-size: 16px; /* Adjust font size for consistency */
+}
+
+.completion-item span {
+    font-size: 16px; /* Make "days" and "hours" labels slightly smaller */
+    color: #666; /* Add some contrast to labels */
+}

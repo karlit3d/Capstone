@@ -1,0 +1,1564 @@
+Array
+(
+    [part_name] => Y2K HEADLIGHT
+    [change_type] => add
+    [quantity] => 9
+    [total_stock] => 10
+)
+Received data: Array
+(
+    [part_name] => TOYOTA PARK LIGHT
+    [change_type] => add
+    [quantity] => 6
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA PARK LIGHT', 'add', '6', '10', NOW())
+Received data: Array
+(
+    [part_id] => FORD OIL FILTER
+    [part_name] => add
+    [change_type] => 3
+    [quantity] => 20
+)
+Invalid input data
+Received data: Array
+(
+    [part_name] => SUZUKI OIL SEAL
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SUZUKI OIL SEAL', 'add', '1', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 19
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '19', NOW())
+Received data: Array
+(
+    [part_name] => SUZUKI OIL SEAL
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SUZUKI OIL SEAL', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 20
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'add', '1', '20', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 13
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '13', NOW())
+Received data: Array
+(
+    [part_name] => HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40
+    [change_type] => add
+    [quantity] => 3
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40', 'add', '3', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 12
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '12', NOW())
+Received data: Array
+(
+    [part_name] => FORD TAIL LIGHT
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD TAIL LIGHT', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA PARK LIGHT
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA PARK LIGHT', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => VILLAIN FENDER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('VILLAIN FENDER', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA SIDE MIRROR
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 13
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA SIDE MIRROR', 'deduct', '1', '13', NOW())
+Received data: Array
+(
+    [part_name] => RUSI OIL
+    [change_type] => deduct
+    [quantity] => 2
+    [total_stock] => 13
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RUSI OIL', 'deduct', '2', '13', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 12
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '12', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'add', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'add', '1', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'add', '1', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'add', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => add
+    [quantity] => 2
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'add', '2', '2', NOW())
+Received data: Array
+(
+    [part_name] => VILLAIN FENDER
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('VILLAIN FENDER', 'add', '1', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'add', '1', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 7
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '7', NOW())
+Received data: Array
+(
+    [part_name] => HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 6
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '6', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '5', NOW())
+Received data: Array
+(
+    [part_name] => RUSI OIL
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 12
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RUSI OIL', 'deduct', '1', '12', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 4
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '4', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '9', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 7
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '7', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 6
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '6', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => SHELL HELIX ULTRA 0W-40 OIL 1L
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 12
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SHELL HELIX ULTRA 0W-40 OIL 1L', 'deduct', '1', '12', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 4
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '4', NOW())
+Received data: Array
+(
+    [part_name] => SUZUKI OIL SEAL
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SUZUKI OIL SEAL', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD TAIL LIGHT
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD TAIL LIGHT', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 4
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '0', '4', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '0', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD TAIL LIGHT
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD TAIL LIGHT', 'deduct', '0', '8', NOW())
+Received data: Array
+(
+    [part_name] => HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40', 'deduct', '0', '8', NOW())
+Received data: Array
+(
+    [part_name] => HYUNDAI SIDE MIRROR
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 18
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HYUNDAI SIDE MIRROR', 'deduct', '0', '18', NOW())
+Received data: Array
+(
+    [part_name] => RUSI OIL
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 12
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RUSI OIL', 'deduct', '0', '12', NOW())
+Received data: Array
+(
+    [part_name] => SHELL HELIX ULTRA 0W-40 OIL 1L
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 12
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SHELL HELIX ULTRA 0W-40 OIL 1L', 'deduct', '0', '12', NOW())
+Received data: Array
+(
+    [part_name] => SUZUKI OIL SEAL
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SUZUKI OIL SEAL', 'deduct', '0', '8', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'deduct', '0', '9', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA PARK LIGHT
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA PARK LIGHT', 'deduct', '0', '9', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA SIDE MIRROR
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 13
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA SIDE MIRROR', 'deduct', '0', '13', NOW())
+Received data: Array
+(
+    [part_name] => VILLAIN FENDER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('VILLAIN FENDER', 'deduct', '0', '10', NOW())
+Received data: Array
+(
+    [part_name] => Y2K HEADLIGHT
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('Y2K HEADLIGHT', 'deduct', '0', '9', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 4
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '0', '4', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '0', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD TAIL LIGHT
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD TAIL LIGHT', 'deduct', '0', '8', NOW())
+Received data: Array
+(
+    [part_name] => HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40', 'deduct', '0', '8', NOW())
+Received data: Array
+(
+    [part_name] => HYUNDAI SIDE MIRROR
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 18
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HYUNDAI SIDE MIRROR', 'deduct', '0', '18', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'deduct', '0', '9', NOW())
+Received data: Array
+(
+    [part_name] => RUSI OIL
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 12
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RUSI OIL', 'deduct', '0', '12', NOW())
+Received data: Array
+(
+    [part_name] => SHELL HELIX ULTRA 0W-40 OIL 1L
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 12
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SHELL HELIX ULTRA 0W-40 OIL 1L', 'deduct', '0', '12', NOW())
+Received data: Array
+(
+    [part_name] => SUZUKI OIL SEAL
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('SUZUKI OIL SEAL', 'deduct', '0', '8', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA PARK LIGHT
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA PARK LIGHT', 'deduct', '0', '9', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA SIDE MIRROR
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 13
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA SIDE MIRROR', 'deduct', '0', '13', NOW())
+Received data: Array
+(
+    [part_name] => VILLAIN FENDER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('VILLAIN FENDER', 'deduct', '0', '10', NOW())
+Received data: Array
+(
+    [part_name] => Y2K HEADLIGHT
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 9
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('Y2K HEADLIGHT', 'deduct', '0', '9', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => TOYOTA ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('TOYOTA ANTENNA', 'deduct', '0', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '1', '0', NOW())
+Received data: Invalid input data
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'add', '1', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'add', '1', '3', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER', 'deduct', '0', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 4
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '0', '4', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 0
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '0', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'add', '1', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 4
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '4', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 3
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '3', NOW())
+Received data: Array
+(
+    [part_name] => HYUNDAI ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HYUNDAI ANTENNA', 'deduct', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => add
+    [quantity] => 4
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'add', '4', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => add
+    [quantity] => 10
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'add', '10', '10', NOW())
+Received data: Array
+(
+    [part_name] => HYUNDAI ANTENNA
+    [change_type] => add
+    [quantity] => 4
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HYUNDAI ANTENNA', 'add', '4', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => add
+    [quantity] => 10
+    [total_stock] => 11
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'add', '10', '11', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => add
+    [quantity] => 9
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'add', '9', '10', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => deduct
+    [quantity] => 8
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'deduct', '8', '0', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'add', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD TAIL LIGHT
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 6
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD TAIL LIGHT', 'deduct', '1', '6', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => HYUNDAI ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HYUNDAI ANTENNA', 'deduct', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HAVOLINE PRODS FULLY SYNTHETIC LE SAE 5W-40', 'deduct', '1', '5', NOW())
+Received data: Array
+(
+    [part_name] => NISSAN ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('NISSAN ANTENNA', 'deduct', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 8
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '8', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL GASKET
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL GASKET', 'deduct', '1', '5', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'add', '1', '1', NOW())
+Received data: Array
+(
+    [part_name] => RBC MUFFLER
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RBC MUFFLER', 'deduct', '1', '0', NOW())
+Received data: Array
+(
+    [part_name] => NISSAN ANTENNA
+    [change_type] => add
+    [quantity] => 1
+    [total_stock] => 2
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('NISSAN ANTENNA', 'add', '1', '2', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 7
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '7', NOW())
+Received data: Array
+(
+    [part_name] => RUSI OIL
+    [change_type] => deduct
+    [quantity] => 2
+    [total_stock] => 10
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('RUSI OIL', 'deduct', '2', '10', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 6
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '6', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 7
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '7', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '5', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 6
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '6', NOW())
+Received data: Array
+(
+    [part_name] => FORD ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 5
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD ANTENNA', 'deduct', '1', '5', NOW())
+Received data: Array
+(
+    [part_name] => HYUNDAI SIDE MIRROR
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 15
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('HYUNDAI SIDE MIRROR', 'deduct', '1', '15', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 5
+    [total_stock] => 0
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '5', '0', NOW())
+Received data: Array
+(
+    [part_name] => FORD OIL FILTER CLASS S
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => -1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('FORD OIL FILTER CLASS S', 'deduct', '1', '-1', NOW())
+Received data: Array
+(
+    [part_name] => NISSAN ANTENNA
+    [change_type] => deduct
+    [quantity] => 1
+    [total_stock] => 1
+)
+Executing SQL: INSERT INTO inventory_stock_changes (part_name, change_type, quantity, total_stock, change_date)
+            VALUES ('NISSAN ANTENNA', 'deduct', '1', '1', NOW())

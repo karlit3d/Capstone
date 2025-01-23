@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" href="initial-logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Tech Automotive</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <header>
+        <div id="overlay"></div>
+        <div class="off-screen-menu">
+            <div class="menu-header">
+                <img src="newlogo.png" alt="AG Logo" class="menu-logo">
+                <span class="menu-title">MENU</span>
+            </div>
+            <ul>
+                <li><a href=".">Home</a></li>
+                <li><a href=".#hero" id="about-link">About Us</a></li>
+                <li><a href=".#services">Services</a></li>
+                <li><a href="Appointment.html">Book</a></li>
+                <li><a href="diagnostic.html">Diagnostic Tool</a></li>
+            </ul>
+        <div class="login-item">
+            <a href="Login.html">Login</a></li>
+        </div>
+        </div>
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo-text">
+                <span class="logo-ag">AG</span>
+                <span class="logo-tech">Tech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="." id="home-link">HOME</a></li>
+                <li><a href=".#hero" id="about-link-nav">ABOUT US</a></li>
+                <li><a href=".#services">SERVICES</a></li>
+                <li><a href="Appointment.html">BOOK</a></li>
+                <li><a href="diagnostic.html">DIAGNOSTIC TOOL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <div class="background-overlay" style="background-image: url('background2.png');"></div>
+                <img src="car2.png" alt="Car 1" class="carousel-image fade-in">
+                <div class="overlay">
+                    <h1 class="fade-slide delay-1">Professional Diagnostics</h1>
+                    <h2 class="fade-slide delay-2">State-of-the-art technology at your service.</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="background-overlay" style="background-image: url('HOME.png');"></div>
+                <img src="car3.png" alt="Car 2" class="carousel-image car2">
+                <div class="overlay">
+                    <h1 class="fade-slide delay-1">Efficient Maintenance</h1>
+                    <h2 class="fade-slide delay-2">Reliable solutions to keep you on the road.</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="background-overlay" style="background-image: url('background3.png');"></div>
+                <img src="car1.png" alt="Car 3" class="carousel-image car3">
+                <div class="overlay">
+                    <h1 class="fade-slide delay-1">Quality Auto Parts</h1>
+                    <h2 class="fade-slide delay-2">High-grade parts for every vehicle model.</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="overlay">
+            <button class="learn-more button-bounce" onclick="location.href='#hero'">LEARN MORE <span class="arrow-right">&#10095;</span></button>
+        </div>
+    
+    </div>
+    
+        </div>
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="contact-icons fade-slide delay-1">
+        <a href="tel:+639453611707" class="icon-link">
+            <img src="phone-icon.png" alt="Phone" class="contact-icon phone-icon ">
+        </a>
+        <a href="mailto:jigzesteban2003@gmail.com" class="icon-link">
+            <img src="email-icon.png" alt="Email" class="contact-icon email-icon ">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100085469358727&mibextid=JRoKGi" target="_blank" class="icon-link">
+            <img src="facebook-icon.png" alt="Facebook" class="contact-icon facebook-icon">
+        </a>
+    </div>
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="info-box">
+                <div class="info-item bounce-in ">
+                    <img src="location-icon.png" alt="Location Icon ">
+                    <div>
+                        <h3 class="pop-in ">Location</h3>
+                        <br>
+                        <p class="pop-in ">13 Santol, Novaliches, <br> Caloocan, Metro Manila</p>
+                    </div>
+                </div>
+                <div class="info-item ">
+                    <img src="contact-icon.png" alt="Contact Icon">
+                    <div>
+                        <h3>Contact Us</h3>
+                        <br>
+                        <p>Phone: 480-314-9845</p>
+                    </div>
+                </div>
+                <div class="info-item ">
+                    <img src="hours-icon.png" alt="Hours Icon">
+                    <div>
+                        <h3>Our Hours</h3>
+                        <br>
+                        <p>Monday - Saturday <br> 8:00am to 5:00pm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="hero-image.jpg" alt="Hero Image">         
+                </div>
+                <div class="hero-text ">
+                    <h2 >ABOUT US//</h2>
+                    <h1 >Welcome to <span class="highlight">AG TECH </span> AUTO PARTS <br> REPAIR SERVICES</h1>
+                    <p class="pop-in">Your trusted partner for all your automotive needs. We are a leading automotive shop based in Caloocan, dedicated to providing top-quality services and parts to keep your vehicle running smoothly. <br>
+                        <br>With years of experience in the industry, our team of certified technicians is committed to delivering exceptional service and ensuring customer satisfaction. We understand the importance of a reliable vehicle and strive to offer the best solutions for maintenance, repairs, and diagnostics.</p>
+                    <br>
+                    <a href="Readmore.html" class="btn button-bounce">READ MORE <span class="arrow-right">&#10095;</span> </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <h2 class="fade-slide delay-1">OUR SERVICES //</h2>
+        <h1 class="fade-slide delay-2">Discover Our Range of Services</h1>
+        <div id="slideshow-container">
+            <div class="slideshow-wrapper">
+                <button id="nextBtn" class="arrow-btn">❯</button>
+                <button id="prevBtn" class="arrow-btn">❮</button>
+                <div class="box-area">
+                    <div class="box active">
+                        <img src="crm.jpg" alt="">
+                        <div class="box-overlay drop-down delay-3">
+                            <h3>Customer Support</h3>
+                            <p>Our friendly and knowledgeable staff is always ready to assist you...</p>
+                            <a href="Appointment.html" class="button-bounce">BOOK NOW</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="box">
+                        <img src="gears.png" alt="">
+                        <div class="box-overlay">
+                            <h3>Genuine Auto Parts</h3>
+                            <p>We offer a wide range of genuine auto parts to guarantee the highest quality and compatibility for your vehicle.</p>
+                            <a href="Appointment.html"class="button-bounce">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="diagnostics.jpg" alt="">
+                        <div class="box-overlay">
+                            <h3>Comprehensive Diagnostics</h3>
+                            <p>Utilizing state-of-the-art diagnostic tools, we accurately identify and resolve issues to ensure your vehicle performs at its best.</p>
+                            <a href="Appointment.html"class="button-bounce">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="maintainance.jpg" alt="">
+                        <div class="box-overlay">
+                            <h3>Routine Maintenance</h3>
+                            <p>From oil changes to brake inspection, our routine maintenance services help prolong the life of your vehicle and prevent costly repairs.</p>
+                            <a href="Appointment.html"class="button-bounce">BOOK NOW</a>
+                    
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="repairs.jpg" alt="">
+                        <div class="box-overlay">
+                            <h3>Quality Repairs</h3>
+                            <p>Our skilled technicians handle everything from minor repairs to major overhauls, ensuring your vehicle is safe and reliable.</p>
+                            <a href="Appointment.html"class="button-bounce">BOOK NOW</a>
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+    <section class="diagnostics-section">
+        <div class="diagnostics-content">
+            <h1 class="fade-slide delay-1">Diagnostics that work.<br>Because we make it work for you.</h1>
+            <p class="fade-slide delay-2">Affordable and effective diagnostic services from licensed providers, in-person or online.</p>
+            <button class="try-now button-bounce" onclick="location.href='diagnostic.html'">TRY NOW!</button>
+        </div>
+        <div class="diagnostics-image">
+            <img src="diagnostics-image.png" alt="Diagnostics Illustration">
+        
+    </section>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section logo-section">
+                <img src="newlogo.png" alt="Company Logo" class="footer-logo">
+                <p>AGTECH</p>
+            </div>
+            <div class="footer-section contact-section">
+                <h3>CONTACT US</h3>
+                <p><strong>Phone:</strong> <span style="color: red;">*63</span> <br> +639453611707 | <a href="mailto:tickets@diagnostics.com">tickets@diagnostics.com</a></p>
+                <p><strong>General Inquiries:</strong> <br> +639453611707 | <br> <a href="mailto:info@diagnostics.com">info@diagnostics.com</a></p>
+            </div>
+            <div class="footer-section updates-section">
+                <h3>EMAIL US!</h3>
+                <p>If you have any questions, feel free to reach out!</p>
+                <a href="mailto:contact@diagnostics.com" class="footer-email">contact@diagnostics.com</a>
+            </div>
+            
+            <div class="footer-section social-section">
+                <h3>FIND US ON SOCIAL MEDIA</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100085469358727&mibextid=JRoKGi"><img src="fbicon.png" alt="Facebook"></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-credits">
+            <p>&copy; 2024 Automotive Shop. All rights reserved.</p>
+            <p>Designed by <a href="https://showrunners.agency" target="_blank" style="color: red;">Kapishstone</a></p>
+        </div>
+    </footer>
+    
+    
+    
+    
+
+        
+    </div>
+    <script src="homepage.js"></script>
+</body>
+</html>

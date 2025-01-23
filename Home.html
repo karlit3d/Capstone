@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGTech Automotive</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <header>
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Service.html">Services</a></li>
+                <li><a href="#">Appointment</a></li>
+                <li><a href="#">Diagnostic Tool</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="ham-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo-text">
+                <span class="logo-ag">AG</span>
+                <span class="logo-tech">Tech</span>
+            </div> 
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="About.html">ABOUT US</a></li>
+                <li><a href="Service.html">SERVICES</a></li>
+                <li><a href="#">BOOK</a></li>
+                <li><a href="#">DIAGNOSTIC TOOL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <div class="background-overlay" style="background-image: url('HOME.png');"></div>
+                <img src="car3.png" alt="Car 1" class="carousel-image">
+            </div>
+            <div class="carousel-item">
+                <div class="background-overlay" style="background-image: url('background2.png');"></div>
+                <img src="car2.png" alt="Car 2" class="carousel-image car2">
+            </div>
+            <div class="carousel-item">
+                <div class="background-overlay" style="background-image: url('background3.png');"></div>
+                <img src="car1.png" alt="Car 3" class="carousel-image car3">
+            </div>
+        </div>
+        <div class="overlay">
+            <h1> AGTech Automotive</h1>
+            <button class="learn-more" onclick="location.href='About.html'">LEARN MORE <span class="arrow-right">&#10095;</span></button>
+        </div>
+            <div class="hero-section">
+                <div class="overlay">
+                    <h1>Welcome to AGTech <br> Automotive</h1>
+                    <button class="learn-more" onclick="location.href='About.html'">LEARN MORE <span class="arrow-right">&#10095;</span></button>
+                </div>
+        </div>
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="contact-icons">
+        <a href="tel:+639453611707" class="icon-link">
+            <img src="phone-icon.png" alt="Phone" class="contact-icon phone-icon">
+        </a>
+        <a href="mailto:jigzesteban2003@gmail.com" class="icon-link">
+            <img src="email-icon.png" alt="Email" class="contact-icon email-icon">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100085469358727&mibextid=JRoKGi" target="_blank" class="icon-link">
+            <img src="facebook-icon.png" alt="Facebook" class="contact-icon facebook-icon">
+        </a>
+    </div>
+    <script src="Home.js"></script>
+</body>
+</html>

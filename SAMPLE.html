@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Tech Automotive</title>
+    <link rel="stylesheet" href="SAMPLE.css">
+</head>
+<body>
+    <header>
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="SAMPLE.html">Home</a></li>
+                <li><a href="#hero" id="about-link">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="Appointment.html">Book</a></li>
+                <li><a href="#">Diagnostic Tool</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo-text">
+                <span class="logo-ag">AG</span>
+                <span class="logo-tech">Tech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="SAMPLE.html">HOME</a></li>
+                <li><a href="#hero" id="about-link-nav">ABOUT US</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="Appointment.html">BOOK</a></li>
+                <li><a href="#">DIAGNOSTIC TOOL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <div class="background-overlay" style="background-image: url('background2.png');"></div>
+                <img src="car2.png" alt="Car 1" class="carousel-image">
+            </div>
+            <div class="carousel-item">
+                <div class="background-overlay" style="background-image: url('HOME.png');"></div>
+                <img src="car3.png" alt="Car 2" class="carousel-image car2">
+            </div>
+            <div class="carousel-item">
+                <div class="background-overlay" style="background-image: url('background3.png');"></div>
+                <img src="car1.png" alt="Car 3" class="carousel-image car3">
+            </div>
+        </div>
+        <div class="overlay">
+            <h1> AGTech Automotive</h1>
+            <button class="learn-more" onclick="location.href='#hero'">LEARN MORE <span class="arrow-right">&#10095;</span></button>
+        </div>
+            <div class="hero-section">
+                <div class="overlay">
+                    <h1>Welcome to AGTech <br> Automotive</h1>
+                    <button class="learn-more" onclick="location.href='About.html'">LEARN MORE <span class="arrow-right">&#10095;</span></button>
+                </div>
+        </div>
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="contact-icons">
+        <a href="tel:+639453611707" class="icon-link">
+            <img src="phone-icon.png" alt="Phone" class="contact-icon phone-icon">
+        </a>
+        <a href="mailto:jigzesteban2003@gmail.com" class="icon-link">
+            <img src="email-icon.png" alt="Email" class="contact-icon email-icon">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100085469358727&mibextid=JRoKGi" target="_blank" class="icon-link">
+            <img src="facebook-icon.png" alt="Facebook" class="contact-icon facebook-icon">
+        </a>
+    </div>
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="info-box">
+                <div class="info-item">
+                    <img src="location-icon.png" alt="Location Icon">
+                    <div>
+                        <h3>Location</h3>
+                        <br>
+                        <p>13 Santol, Novaliches, <br> Caloocan, Metro Manila</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="contact-icon.png" alt="Contact Icon">
+                    <div>
+                        <h3>Contact Us</h3>
+                        <br>
+                        <p>Phone: 480-314-9845</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="hours-icon.png" alt="Hours Icon">
+                    <div>
+                        <h3>Our Hours</h3>
+                        <br>
+                        <p>Monday - Saturday <br> 8:00am to 5:00pm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="hero-image.jpg" alt="Hero Image">
+                    <div class="overlay-text">
+                        <h3>00 Years</h3>
+                        <p>Experience</p>
+                    </div>                 
+                </div>
+                <div class="hero-text">
+                    <h2>ABOUT US</h2>
+                    <h1>Welcome to <span class="highlight">AG TECH </span> AUTO PARTS <br> REPAIR SERVICES</h1>
+                    <p>Your trusted partner for all your automotive needs. We are a leading automotive shop based in Caloocan, dedicated to providing top-quality services and parts to keep your vehicle running smoothly. <br>
+                        <br>With years of experience in the industry, our team of certified technicians is committed to delivering exceptional service and ensuring customer satisfaction. We understand the importance of a reliable vehicle and strive to offer the best solutions for maintenance, repairs, and diagnostics.</p>
+                        <br>
+                        <a href="Readmore.html" class="btn">READ MORE <span class="arrow-right">&#10095;</span> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id= "services" class="services">
+        <div class="stats-section">
+            <div class="container">
+                <div class="stats-box">
+                    <div class="stats-item">
+                        <img src="icon2.png" alt="Years Experience" class="stats-icon icon1">
+                        <h2>1234</h2>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stats-item">
+                        <img src="icon1.png" alt="Expert Technicians" class="stats-icon icon2">
+                        <h2>1234</h2>
+                        <p>Expert Technicians</p>
+                    </div>
+                    <div class="stats-item">
+                        <img src="icon3.png" alt="Satisfied Clients" class="stats-icon icon3">
+                        <h2>1234</h2>
+                        <p>Satisfied Clients</p>
+                    </div>
+                    <div class="stats-item">
+                        <img src="icon4.png" alt="Completed Projects" class="stats-icon icon4">
+                        <h2>1234</h2>
+                        <p>Completed Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>OUR SERVICES</h2>
+        <h1>Discover Our Range of Services</h1>
+        <div class="services-container">
+            <div class="services-menu">
+                <button class="service-button " onclick="showService('comprehensive')">
+                    <img src="diag.png" alt="Diagnostics Icon"> Comprehensive Diagnostics
+                </button>
+                <br>
+                <button class="service-button " onclick="showService('maintenance')">
+                    <img src="main.png" alt="Maintenance Icon"> Routine Maintenance
+                </button>
+                <br>
+                <button class="service-button" onclick="showService('repairs')">
+                    <img src="rep.png" alt="Repairs Icon"> Quality Repairs
+                </button>
+                <br>
+                <button class="service-button" onclick="showService('parts')">
+                    <img src="supp.png" alt="Parts Icon"> Genuine Auto Parts
+                </button>
+                <br>
+                <button class="service-button" onclick="showService('support')">
+                    <img src="cust.png" alt="Support Icon"> Customer Support
+                </button>
+            </div>
+            <div class="service-content" id="comprehensive">
+                <img src="diagnostic.jpg" alt="Comprehensive Diagnostics">
+                <div>
+                    <h3>Comprehensive Diagnostics</h3>
+                    <p>Utilizing state-of-the-art diagnostic <br> tools, we accurately identify and <br> resolve issues to ensure your vehicle <br> performs at its best.</p>
+                    <a href="Appointment.html" class="book-now">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="service-content" id="maintenance" style="display: none;">
+                <img src="maintainance.jpg" alt="Routine Maintenance">
+                <div>
+                    <h3>Routine Maintenance</h3>
+                    <p>Keep your vehicle in top condition with our routine maintenance services, designed to prevent problems before they start.</p>
+                    <a href="Appointment.html" class="book-now">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="service-content" id="repairs" style="display: none;">
+                <img src="repairs.jpeg" alt="Quality Repairs">
+                <div>
+                    <h3>Quality Repairs</h3>
+                    <p>Our skilled technicians perform high-quality repairs to get you back on the road safely and quickly.</p>
+                    <a href="Appointment.html" class="book-now">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="service-content" id="parts" style="display: none;">
+                <img src="parts.jpg" alt="Genuine Auto Parts">
+                <div>
+                    <h3>Genuine Auto Parts</h3>
+                    <p>We provide genuine auto parts to ensure your vehicle runs smoothly and reliably.</p>
+                    <a href="Appointment.html" class="book-now">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="service-content" id="support" style="display: none;">
+                <img src="support.png" alt="Customer Support">
+                <div>
+                    <h3>Customer Support</h3>
+                    <p>Our dedicated customer support team is here to help with all your automotive needs.</p>
+                    <a href="Appointment.html" class="book-now">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="SAMPLE.js"></script>
+</body>
+</html>

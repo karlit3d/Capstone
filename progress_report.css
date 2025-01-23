@@ -1,0 +1,627 @@
+body {
+    font-family: 'Proxima Nova';
+}
+
+/* Logo Text */
+.logo-text {
+    display: inline-block;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    padding: 30px 40px;
+    margin-bottom: -50px;
+}
+
+.logo-ag {
+    color: #282959;
+    font-weight: bold;
+}
+
+.logo-tech {
+    color: red;
+    font-weight: bold;
+}
+
+.Title h5 {
+    font-family: 'Proxima Nova';
+    font-size: 35px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    color: #282959;
+}
+
+
+
+
+.progress-header p {
+    font-size: 17px !important; /* Reduce font size for secondary details */
+    margin: 5px 0;
+    color: #dcdcdc; /* Use a lighter shade for less visual weight */
+}
+
+
+/* Header ID */
+.small-id {
+    font-size: 16px;
+    color: #dcdcdc; /* Subtle text color */
+    margin-bottom: 15px;
+}
+.bold-label {
+    font-weight: 800; /* Extra bold */
+    font-size: 19px; /* Adjust size */
+}
+ .progress-header h1{
+    padding-left: 10px;
+}
+/* Styling for Each Text Group */
+.icon-text {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center-align content */
+    gap: 5px; /* Space between icon and text */
+    font-size: 14px; /* Adjust font size */
+    color: #dcdcdc; /* Light gray for icons and text */
+    text-align: center; /* Center-align text */
+}
+
+.icon-text i {
+    font-size: 24px; /* Larger icon size for emphasis */
+    color: #e8e8e8; /* Accent red color */
+}
+
+.icon-text span {
+    font-weight: bold;
+    color: white; /* Bright text for key details */
+}
+
+.icon-text span.highlight {
+    color: #f1c40f; /* Yellow for important details */
+}
+/* Completion Date */
+.completion-date {
+    font-size: 16px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #e0e0e0; /* Subtle color for secondary information */
+    text-align: center;
+    border-top: 1px solid #444; /* Add a subtle top border for separation */
+    padding-top: 15px; /* Add space above the border */
+}
+
+
+.step-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    transition: transform 0.5s ease; /* Slow zoom animation */
+    z-index: 1; /* Ensure buttons are above the line */
+}
+/* Hide both connecting lines on hover or when selected */
+.step-button:hover::before,
+.step-button:hover::after,
+.step-button.selected::before,
+.step-button.selected::after {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease; /* Smooth fade-out effect */
+}
+
+/* Additional styling for the hovered button for visibility */
+.step-button:hover {
+    transform: scale(1.2); /* Slightly zoom in */
+    z-index: 2; /* Bring to the front */
+}
+
+/* Styling for selected state */
+.step-button.selected {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.step-button::before,
+.step-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; /* Length of the connecting line */
+    height: 2px; /* Thickness of the line */
+    background-color: #e0e0e0; /* Default line color */
+    z-index: 0; /* Ensure the line is behind the button */
+}
+.step-button::before,
+.step-button::after {
+    opacity: 1; /* Reset visibility */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+.step-button::before {
+    left: -50px; /* Position line to the left */
+}
+
+.step-button::after {
+    right: -50px; /* Position line to the right */
+}
+
+.step-button:first-child::before {
+    display: none; /* Remove the left line for the first button */
+}
+
+.step-button:last-child::after {
+    display: none; /* Remove the right line for the last button */
+}
+
+.step-button.completed::before,
+.step-button.completed::after {
+    background-color: #28a745; /* Green for completed sections */
+}
+
+.step-button.in-progress::before,
+.step-button.in-progress::after {
+    background-color: #f1c40f; /* Yellow for in-progress sections */
+}
+
+.step-button.pending::before,
+.step-button.pending::after {
+    background-color: #ff6b6b; /* Red for pending sections */
+}
+
+
+
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px; /* Adjust size */
+    height: 70px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+
+}
+
+/* Dynamic Coloring for Completed Sections */
+.step-button.completed ~ .progress-line {
+    background-color: #28a745; /* Green for completed sections */
+}
+
+/* Button Colors */
+.step-button.pending .icon {
+    background-color: #ff6b6b; /* Pinkish Red */
+}
+
+.step-button.in-progress .icon {
+    background-color: #f1c40f; /* Yellow */
+}
+
+.step-button.completed .icon {
+    background-color: #28a745; /* Green */
+}
+
+
+/* Text Styling */
+.horizontal-progress p {
+    margin: 0;
+    font-size: 12px; /* Larger text size */
+    color: #333; /* Darker text color for better readability */
+    font-weight: bold; /* Make text bold */
+    text-transform: capitalize; /* Capitalize the text */
+}
+
+
+
+
+
+
+
+/* Layout for Progress Content */
+.progress-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+
+
+.progress-section h4 {
+    font-family: 'Proxima Nova';
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: #282959;
+    text-align: center; /* Center align headings for uniformity */
+}
+
+
+
+/* Reminder Text */
+.reminder {
+    font-family: 'Proxima Nova';
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.reminder p {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+/* Timeline */
+.timeline-container {
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    max-width: 700px;
+}
+.timeline-container h4 {
+    font-family: 'Proxima Nova';
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-left: -7px;
+    color: #282959; /* Change color as needed */
+    text-align: left; /* Adjust alignment */
+}
+
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: 20px;
+    position: relative;
+    border-left: 2px solid #ccc; /* Vertical line for the timeline */
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 0px;
+}
+
+
+.timeline-point {
+    position: absolute; /* Allows positioning relative to the parent */
+    left: -13px; /* Aligns with the vertical line */
+    top: 0; /* Centers vertically */
+    width: 20px; /* Diameter of the circle */
+    height: 20px;
+    border-radius: 50%; /* Makes it circular */
+    background-color: #fff; /* Default background */
+    border: 2px solid #007bff; /* Blue border for default circles */
+}
+.text-green {
+    color: green;
+    font-weight: bold; /* Optional: Make it bold */
+}
+
+.timeline-time {
+    font-size: 17px;
+    color: #555;
+    font-weight: bold;
+    line-height: 5px; /* Match line height to the circle size for perfect vertical alignment */
+
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.timeline-content {
+    background: #fff; /* White background for the content */
+    padding: 10px 15px; /* Space inside the content box */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 17px; /* Adjust font size */
+    color: #282959; /* Text color */
+    margin-left: 20px; /* Align with the date */
+    
+}
+
+
+
+/* Main Container Layout */
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space out left and right sections */
+    gap: 30px; /* Space between sections */
+    max-width: 1200px;
+    margin: 0 auto; /* Center align container */
+    padding: 20px;
+}
+
+/* Left Container */
+.container-left {
+    flex: 1; /* Occupy proportional space */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-width: 300px; /* Prevent shrinking */
+}
+
+.container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the horizontal progress bar */
+    gap: 20px; /* Space between elements in the right container */
+    margin-top: 20px; /* Add space between the header and progress bar */
+}
+
+.progress-header {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    background-color: #282959; /* Dark blue background */
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Spread out content */
+    gap: 20px; /* Space between groups */
+    max-width: 800px; /* Slightly larger width */
+    margin: 20px auto; /* Center card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.progress-header:hover {
+    transform: scale(1.03); /* Subtle hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+/* Name Section */
+.progress-header h2 {
+    font-size: 22px; /* Make the name stand out */
+    font-weight: bold;
+    color: #ffffff; /* Keep the name bright */
+    margin: 0; /* Remove unnecessary spacing */
+    text-transform: capitalize; /* Capitalize names */
+    text-align: center; /* Center-align the name */
+}
+
+/* Dividers Between Groups */
+.progress-header .info-group {
+    border-left: 1px solid rgba(255, 255, 255, 0.2); /* Light divider */
+    padding-left: 15px; /* Space from the divider */
+}
+
+.progress-header .info-group:first-child {
+    border-left: none; /* Remove divider for the first group */
+    padding-left: 0; /* Align without offset */
+}
+.horizontal-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 50px; /* Space between buttons */
+}
+
+.progress-section {
+    display: block; /* Ensure it's visible */
+    padding: 20px;
+    border: 1px solid #ddd; /* Standard border for container */
+    border-radius: 8px;
+    background: #f9f9f9;
+    margin-bottom: 20px; /* Space between sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.progress-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.progress-section li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Styling for cancelled items */
+.cancelled-item {
+    color: red; /* Make the text red */
+}
+
+/* Styling for completed items */
+.completed-item {
+    color: green; /* Make the text green */
+}
+
+
+/* Styling for In Progress items */
+.in-progress-item {
+    color: #e0a800; /* Yellow text */
+}
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .progress-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-section {
+        width: 90%; /* Full width for smaller screens */
+    }
+     /* Progress Item Adjustments */
+     .progress-item {
+        width: 100%; /* Full width for items */
+        align-items: center; /* Center-align */
+    }
+      /* Adjust Timeline */
+      .timeline-container {
+        padding: 15px; /* Reduce padding */
+        max-width: 100%; /* Use full width */
+    }
+
+    .timeline-content {
+        font-size: 14px; /* Smaller font */
+    }
+
+    .timeline-time {
+        font-size: 12px; /* Adjust time font size */
+    }
+}
+/* Responsive Styles for Small Screens (max-width: 576px) */
+@media (max-width: 576px) {
+    .progress-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .progress-section {
+        width: 95%; /* Utilize more screen width */
+        margin-bottom: 10px; /* Reduce space between sections */
+        padding: 10px; /* Compact padding */
+    }
+
+    /* Progress Item Adjustments */
+    .progress-item {
+        width: 100%; /* Full width for items */
+        align-items: center;
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .step-button {
+        margin-bottom: 5px; /* Add space below buttons */
+    }
+
+    .step-button .icon {
+        width: 40px; /* Smaller icon for small screens */
+        height: 40px;
+        font-size: 16px; /* Adjust icon size */
+    }
+
+    .step-button p {
+        font-size: 12px; /* Smaller text size */
+        margin-top: 5px; /* Adjust spacing */
+    }
+
+    /* Timeline Adjustments */
+    .timeline-container {
+        padding: 10px; /* Reduce padding */
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .timeline-content {
+        font-size: 12px; /* Adjust text size */
+    }
+
+    .timeline-time {
+        font-size: 10px; /* Smaller font for time */
+    }
+
+    /* Hide Status Lines */
+    .status-line {
+        display: none; /* Completely hide lines for compact view */
+    }
+
+    /* General Adjustments */
+    .reminder p {
+        font-size: 14px; /* Adjust reminder text size */
+        text-align: center; /* Ensure centered alignment */
+    }
+
+    .progress-header {
+        flex-direction: column; /* Stack header items */
+        align-items: center; /* Center-align content */
+        text-align: center; /* Align text for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .progress-header h2 {
+        font-size: 18px; /* Smaller font for titles */
+    }
+}
+/* Responsive Styles for Extra-Small Screens (max-width: 400px) */
+@media (max-width: 400px) {
+    .progress-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px; /* Minimal padding */
+    }
+
+    .progress-section {
+        width: 100%; /* Full width */
+        margin-bottom: 5px; /* Reduce space between sections */
+        padding: 5px; /* Compact padding */
+    }
+
+    /* Progress Item Adjustments */
+    .progress-item {
+        width: 100%; /* Full width */
+        align-items: center;
+        margin-bottom: 5px; /* Reduce spacing */
+    }
+
+    .step-button {
+        margin-bottom: 5px; /* Adjust spacing below buttons */
+    }
+
+    .step-button .icon {
+        width: 30px; /* Smallest icon size */
+        height: 30px;
+        font-size: 14px; /* Compact icon font size */
+    }
+
+    .step-button p {
+        font-size: 10px; /* Smallest text size */
+        margin-top: 2px; /* Minimal spacing */
+    }
+
+    /* Timeline Adjustments */
+    .timeline-container {
+        padding: 5px; /* Minimal padding */
+        max-width: 100%; /* Full width */
+    }
+
+    .timeline-content {
+        font-size: 10px; /* Smaller text size */
+    }
+
+    .timeline-time {
+        font-size: 8px; /* Smallest font for time */
+    }
+
+    /* Status Lines */
+    .status-line {
+        display: none; /* Hide lines completely */
+    }
+
+    /* General Adjustments */
+    .reminder p {
+        font-size: 12px; /* Ensure readability */
+        text-align: center;
+    }
+
+    .progress-header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align */
+        text-align: center;
+        padding: 10px; /* Reduce padding */
+    }
+
+    .progress-header h2 {
+        font-size: 14px; /* Adjust header font size */
+    }
+
+    /* Buttons Hover Scaling */
+    .step-button:hover {
+        transform: none; /* Disable hover scaling */
+    }
+}
