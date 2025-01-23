@@ -1,0 +1,827 @@
+Upload error log created on 2024-10-31 19:48:45
+2024-10-31 19:54:51 - Files received: Array
+(
+    [name] => Array
+        (
+            [0] => 5.jpg
+            [1] => 1.jpg
+        )
+
+    [full_path] => Array
+        (
+            [0] => 5.jpg
+            [1] => 1.jpg
+        )
+
+    [type] => Array
+        (
+            [0] => image/jpeg
+            [1] => image/jpeg
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => C:\xampp\tmp\phpFBFB.tmp
+            [1] => C:\xampp\tmp\phpFBFC.tmp
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 4998599
+            [1] => 7383850
+        )
+
+)
+
+2024-10-31 19:54:51 - No checklist file uploaded.
+2024-10-31 19:58:54 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => 
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpAFBE.tmp
+                    [1] => 
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 4
+                )
+
+            [size] => Array
+                (
+                    [0] => 7383850
+                    [1] => 0
+                )
+
+        )
+
+)
+
+2024-10-31 19:58:54 - No checklist file uploaded.
+2024-10-31 19:58:54 - File type not allowed for car condition: 
+2024-10-31 20:10:03 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => Print Job Order.pdf
+                    [1] => 2x2-Esteban-JaelIaneGhounZeus.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => Print Job Order.pdf
+                    [1] => 2x2-Esteban-JaelIaneGhounZeus.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => application/pdf
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpE3B1.tmp
+                    [1] => C:\xampp\tmp\phpE3B2.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 181399
+                    [1] => 26442
+                )
+
+        )
+
+)
+
+2024-10-31 20:10:03 - No checklist file uploaded.
+2024-10-31 20:12:54 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php80A6.tmp
+                    [1] => C:\xampp\tmp\php80B7.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 7383850
+                    [1] => 6933396
+                )
+
+        )
+
+)
+
+2024-10-31 20:12:54 - No checklist file uploaded.
+2024-10-31 20:15:11 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                    [2] => 3.jpg
+                    [3] => 4.jpg
+                    [4] => 5.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                    [2] => 3.jpg
+                    [3] => 4.jpg
+                    [4] => 5.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                    [2] => image/jpeg
+                    [3] => image/jpeg
+                    [4] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php9753.tmp
+                    [1] => C:\xampp\tmp\php9764.tmp
+                    [2] => C:\xampp\tmp\php9774.tmp
+                    [3] => C:\xampp\tmp\php9785.tmp
+                    [4] => C:\xampp\tmp\php9796.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 7383850
+                    [1] => 6933396
+                    [2] => 6464621
+                    [3] => 6442460
+                    [4] => 4998599
+                )
+
+        )
+
+)
+
+2024-10-31 20:15:11 - No checklist file uploaded.
+2024-11-01 04:20:29 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => me.jpg
+                    [1] => 1.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => me.jpg
+                    [1] => 1.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpE058.tmp
+                    [1] => C:\xampp\tmp\phpE069.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 5499618
+                    [1] => 7383850
+                )
+
+        )
+
+)
+
+2024-11-01 04:20:29 - No checklist file uploaded.
+2024-11-01 04:21:58 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 5.jpg
+                    [1] => 1.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 5.jpg
+                    [1] => 1.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php3C7F.tmp
+                    [1] => C:\xampp\tmp\php3C90.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 4998599
+                    [1] => 7383850
+                )
+
+        )
+
+)
+
+2024-11-01 04:21:58 - No checklist file uploaded.
+2024-11-01 04:23:35 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => me.jpg
+                    [1] => About me.png
+                )
+
+            [full_path] => Array
+                (
+                    [0] => me.jpg
+                    [1] => About me.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpB8FF.tmp
+                    [1] => C:\xampp\tmp\phpB910.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 5499618
+                    [1] => 732141
+                )
+
+        )
+
+)
+
+2024-11-01 04:23:35 - No checklist file uploaded.
+2024-11-01 04:25:37 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php92A3.tmp
+                    [1] => C:\xampp\tmp\php92B4.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 7383850
+                    [1] => 6933396
+                )
+
+        )
+
+)
+
+2024-11-01 04:25:37 - No checklist file uploaded.
+2024-11-01 04:29:42 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                    [2] => 3.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                    [2] => 3.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                    [2] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php51C1.tmp
+                    [1] => C:\xampp\tmp\php51D1.tmp
+                    [2] => C:\xampp\tmp\php51E2.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 7383850
+                    [1] => 6933396
+                    [2] => 6464621
+                )
+
+        )
+
+)
+
+2024-11-01 04:35:52 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                    [2] => 3.jpg
+                    [3] => 4.jpg
+                    [4] => 5.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 2.jpg
+                    [2] => 3.jpg
+                    [3] => 4.jpg
+                    [4] => 5.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                    [2] => image/jpeg
+                    [3] => image/jpeg
+                    [4] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpF629.tmp
+                    [1] => C:\xampp\tmp\phpF63A.tmp
+                    [2] => C:\xampp\tmp\phpF64A.tmp
+                    [3] => C:\xampp\tmp\phpF65B.tmp
+                    [4] => C:\xampp\tmp\phpF67B.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 7383850
+                    [1] => 6933396
+                    [2] => 6464621
+                    [3] => 6442460
+                    [4] => 4998599
+                )
+
+        )
+
+)
+
+2024-11-01 04:37:26 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 5.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 1.jpg
+                    [1] => 5.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php65AC.tmp
+                    [1] => C:\xampp\tmp\php65BD.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 7383850
+                    [1] => 4998599
+                )
+
+        )
+
+)
+
+2024-11-01 05:06:49 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => prof.png
+                    [1] => me.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => prof.png
+                    [1] => me.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/png
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php4E0C.tmp
+                    [1] => C:\xampp\tmp\php4E0D.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 516337
+                    [1] => 5499618
+                )
+
+        )
+
+)
+
+2024-11-01 06:34:38 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => CO-AUTHORSHIP-AGREEMENT.pdf
+                    [1] => About me.png
+                )
+
+            [full_path] => Array
+                (
+                    [0] => CO-AUTHORSHIP-AGREEMENT.pdf
+                    [1] => About me.png
+                )
+
+            [type] => Array
+                (
+                    [0] => application/pdf
+                    [1] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpB30D.tmp
+                    [1] => C:\xampp\tmp\phpB31D.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 858169
+                    [1] => 732141
+                )
+
+        )
+
+)
+
+2024-11-01 06:48:06 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 462542385_437649626020594_4241602666550852807_n.jpg
+                    [1] => 462640962_3939506989652162_7441887404624792900_n.jpg
+                    [2] => 462547912_922191599834901_6107650301322858495_n.jpg
+                    [3] => 462648064_579615991257537_4096330205830329919_n.jpg
+                    [4] => 462560527_1325142788866949_6998819650591301699_n.jpg
+                    [5] => 462582384_528534779975396_6177029075655069392_n.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => 462542385_437649626020594_4241602666550852807_n.jpg
+                    [1] => 462640962_3939506989652162_7441887404624792900_n.jpg
+                    [2] => 462547912_922191599834901_6107650301322858495_n.jpg
+                    [3] => 462648064_579615991257537_4096330205830329919_n.jpg
+                    [4] => 462560527_1325142788866949_6998819650591301699_n.jpg
+                    [5] => 462582384_528534779975396_6177029075655069392_n.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                    [2] => image/jpeg
+                    [3] => image/jpeg
+                    [4] => image/jpeg
+                    [5] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php664.tmp
+                    [1] => C:\xampp\tmp\php665.tmp
+                    [2] => C:\xampp\tmp\php666.tmp
+                    [3] => C:\xampp\tmp\php667.tmp
+                    [4] => C:\xampp\tmp\php668.tmp
+                    [5] => C:\xampp\tmp\php669.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 167628
+                    [1] => 249886
+                    [2] => 227736
+                    [3] => 205936
+                    [4] => 106322
+                    [5] => 196601
+                )
+
+        )
+
+)
+
+2024-11-06 10:27:38 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => commitment-bg.jpg
+                    [1] => choose-bg.jpg
+                )
+
+            [full_path] => Array
+                (
+                    [0] => commitment-bg.jpg
+                    [1] => choose-bg.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpC011.tmp
+                    [1] => C:\xampp\tmp\phpC012.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 115075
+                    [1] => 310526
+                )
+
+        )
+
+)
+
+2024-11-06 10:37:39 - Full _FILES array: Array
+(
+    [uploaded_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => background1.png
+                    [1] => background3.png
+                    [2] => background2.png
+                )
+
+            [full_path] => Array
+                (
+                    [0] => background1.png
+                    [1] => background3.png
+                    [2] => background2.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/png
+                    [1] => image/png
+                    [2] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpEC38.tmp
+                    [1] => C:\xampp\tmp\phpEC39.tmp
+                    [2] => C:\xampp\tmp\phpEC3A.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 975576
+                    [1] => 880603
+                    [2] => 840835
+                )
+
+        )
+
+)
+

@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Checklist</title>
+    <link rel="stylesheet" href="upload_style.css">
+    <script>
+     function addFileInput() {
+    const fileSections = document.querySelectorAll('.file-section');
+    const lastFileSection = fileSections[fileSections.length - 1]; // Get the last file section
+    
+    const newInputDiv = document.createElement('div');
+    newInputDiv.className = 'file-section';
+    newInputDiv.innerHTML = `
+        <label>Additional File:</label>
+        <input type="file" name="uploaded_files[]" accept="image/*" capture="environment" onchange="previewImage(this)">
+        <div class="preview"></div> <!-- Preview container -->
+    `;
+    
+    // Insert the new input after the last file section
+    lastFileSection.insertAdjacentElement('afterend', newInputDiv);
+}
+
+function previewImage(input) {
+    const file = input.files[0];
+    const previewContainer = input.nextElementSibling; // Find the sibling 'preview' div
+
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            previewContainer.innerHTML = `<img src="${e.target.result}" alt="Image Preview" style="max-width: 100%; height: auto; border-radius: 8px; margin-top: 10px;" />`;
+        };
+        reader.readAsDataURL(file);
+    } else {
+        previewContainer.innerHTML = "<p>No image selected or file type is not supported.</p>";
+    }
+}
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="business-info">
+                        <div class="business-details">
+                            <img src="initial-logo.png" alt="AG-Tech Logo" class="business-logo">
+                            <div class="business-text">
+                                <h2 class="business-name">AG TECHNICIAN SERVICES</h2>
+                                <p class="business-address">BLK 34 LOT 13 SANTOL KANAN St. corner MULAWIN</p>
+                                <p class="business-address">AMPARO VILLAGE CALOOCAN CITY</p>
+                                <p class="business-contact">AG TECH - ALEX Mobile No: 09453611707</p>
+                            </div>
+                        </div>
+                        <hr class="business-separator">
+                    </div>
+                    <div class="header">Upload Checklist</div>
+                    <div class="details">
+                        <?php echo $appointmentDetails; ?>
+                    </div>
+                    
+                    <form action="upload_files.php" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
+                    
+                        <!-- Checklist File Section with Preview -->
+                        <div id="file-section" class="file-section">
+                            <label for="checklist">CHECKLIST:</label>
+                            <input type="file" name="uploaded_files[]" accept="image/*" capture="environment" required onchange="previewImage(this)">
+                            <div class="preview" id="preview-checklist"></div> <!-- Preview container -->
+                        </div>
+                    
+                        <!-- Car Condition File Section with Preview -->
+                        <div class="file-section">
+                            <label for="car_condition">ACTUAL CAR CONDITION:</label>
+                            <input type="file" name="uploaded_files[]" accept="image/*" capture="environment" onchange="previewImage(this)">
+                            <div class="preview" id="preview-car-condition"></div> <!-- Preview container -->
+                        </div>
+                    
+                        <div class="buttons">
+                            <button type="button" class="add-button" onclick="addFileInput()">Add Another</button>
+                            <button type="submit" class="upload-button">Upload</button>
+                        </div>
+                    </form>
+                    
+    </div>
+</body>
+</html>

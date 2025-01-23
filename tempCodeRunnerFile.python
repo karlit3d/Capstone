@@ -1,0 +1,107 @@
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix, classification_report
+import plotly.express as px
+from scipy.stats import zscore  # Added import for zscore
+
+# Step 1: Load the Dataset
+file_path = 'C:/Users/Mikezedy/PycharmProjects/PythonProject3/heart_attack_germany.csv'
+dataset = pd.read_csv(file_path)
+
+# Step 2: Dataset Overview
+print("Dataset Information:")
+print(dataset.info())
+print("\nFirst 5 rows of the dataset:")
+print(dataset.head())
+print("\nSummary Statistics:")
+print(dataset.describe())
+
+# Step 3: Check for Missing Values
+missing_values = dataset.isnull().sum()
+print("\nMissing Values:")
+print(missing_values)
+
+# Step 4: Check for Duplicates
+duplicates = dataset.duplicated().sum()
+print(f"\nNumber of duplicate rows: {duplicates}")
+
+# Step 5: Handle Duplicates
+dataset = dataset.drop_duplicates()
+
+# Step 6: Handle Outliers (Z-score method)
+numerical_features = dataset.select_dtypes(include=['int64', 'float64']).columns.tolist()
+z_scores = dataset[numerical_features].apply(zscore)
+dataset = dataset[(z_scores < 3).all(axis=1)]
+
+# Step 7: Split Features and Target Variable
+target_variable = "Heart_Attack_Incidence"  # Replace with the actual target column name
+X = dataset.drop(columns=[target_variable])
+y = dataset[target_variable]
+
+# Step 8: Preprocessing Pipelines
+# Separate numerical and categorical features
+numerical_features = X.select_dtypes(include=['int64', 'float64']).columns.tolist()
+categorical_features = X.select_dtypes(include=['object']).columns.tolist()
+
+# Numerical pipeline
+numerical_pipeline = Pipeline([
+    ('imputer', SimpleImputer(strategy='mean')),  # Replace missing values with the mean
+    ('scaler', StandardScaler())  # Scale numerical data
+])
+
+# Categorical pipeline
+categorical_pipeline = Pipeline([
+    ('imputer', SimpleImputer(strategy='most_frequent')),  # Replace missing values with the mode
+    ('encoder', OneHotEncoder(handle_unknown='ignore'))  # One-hot encode categorical data
+])
+
+# Combine preprocessing steps
+preprocessor = ColumnTransformer([
+    ('num', numerical_pipeline, numerical_features),
+    ('cat', categorical_pipeline, categorical_features)
+])
+
+# Apply preprocessing
+X_preprocessed = preprocessor.fit_transform(X)
+
+# Step 9: Split Dataset into Train, Validation, and Test Sets
+X_train, X_temp, y_train, y_temp = train_test_split(X_preprocessed, y, test_size=0.3, random_state=42)
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
+
+# Step 10: Train a Logistic Regression Model
+model = LogisticRegression(max_iter=1000, random_state=42)
+model.fit(X_train, y_train)
+
+# Step 11: Make Predictions on the Test Set
+y_pred = model.predict(X_test)
+
+# Step 12: Evaluate the Model with a Confusion Matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+# Visualize the Confusion Matrix using Plotly
+conf_matrix_df = pd.DataFrame(conf_matrix,
+                              index=[f"Actual {i}" for i in range(len(conf_matrix))],
+                              columns=[f"Predicted {i}" for i in range(len(conf_matrix))])
+
+fig = px.imshow(conf_matrix_df,
+                text_auto=True,
+                color_continuous_scale='Blues',
+                title="Confusion Matrix")
+fig.update_layout(title_x=0.5)
+fig.show()
+
+# Step 13: Print Classification Report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# Step 14: Output Shapes of Data
+print("\nShapes of datasets after preprocessing and splitting:")
+print(f"Training data: {X_train.shape}, Training labels: {y_train.shape}")
+print(f"Validation data: {X_val.shape}, Validation labels: {y_val.shape}")
+print(f"Testing data: {X_test.shape}, Testing labels: {y_test.shape}")

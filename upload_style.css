@@ -1,0 +1,218 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.header {
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+.details p {
+    margin: 4px 0;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #282959;
+}
+
+.file-section {
+    margin-top: 15px;
+}
+
+.file-section label {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.add-button {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+.upload-button {
+    background-color: #3A3B66;
+    color: #fff;
+}
+
+.close-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.business-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.business-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.business-logo {
+    width: 150px;
+    height: auto;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.business-text {
+    text-align: left;
+}
+
+.business-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.business-address, .business-contact {
+    margin: 0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.business-separator {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+/* Responsive Styles */
+
+/* For screens up to 425px */
+@media (max-width: 425px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 22px;
+        font-weight: 800;
+        margin-top: -10px;
+    }
+
+    .details p {
+        font-size: 18px;
+    }
+
+    .business-logo {
+        width: 120px; /* Adjust logo size for smaller screens */
+        margin-right: 10px;
+    }
+
+    .business-name {
+        font-size: 22px;
+    }
+
+    .business-address, .business-contact {
+        font-size: 15px;
+    }
+
+    .buttons button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* For screens up to 375px */
+@media (max-width: 375px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 20px;
+        font-weight: 800;
+        margin-top: -10px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+
+    .business-logo {
+        width: 100px; /* Further reduce logo size */
+        margin-right: 8px;
+    }
+
+    .business-name {
+        font-size: 20px;
+    }
+
+    .business-address, .business-contact {
+        font-size: 14px;
+    }
+
+    .buttons button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* For screens up to 320px */
+@media (max-width: 320px) {
+    .business-details {
+        display: block; /* Stack text vertically on very small screens */
+    }
+
+    .business-logo {
+        display: none; /* Hide logo at this resolution */
+    }
+
+    .container {
+        padding: 8px;
+    }
+
+    .header {
+        font-size: 18px;
+        font-weight: 800;
+        margin-top: -10px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+
+    .business-name {
+        font-size: 18px;
+    }
+
+    .business-address, .business-contact {
+        font-size: 13px;
+    }
+
+    .buttons button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
