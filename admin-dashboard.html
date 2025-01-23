@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <h1>AG</h1>
+                <h2>TECH</h2>
+                <div class="nav-links">
+                    <a href="admin-dashboard.html" class="nav-item active">Dashboard</a>
+                    <a href="Inventory.html" class="nav-item">Inventory</a>
+                    <a href="admin-appointment.html" class="nav-item">Appointments</a>
+                    <a href="service-tagging.html" class="nav-item">Service Tagging</a>
+                </div>
+            </div>
+            <div class="header-right">
+                <p>Hey, Admin</p>
+                <div class="profile-pic"></div>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">▼</button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="homepage.html" onclick="confirmLogout()">Log Out</a>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="dashboard-stats">   
+            <div class="card pending">
+                <div class="icon"></div>
+                <h2>Pending Appointments</h2>
+                <h3></h3>
+            </div>
+            <div class="card upcoming">
+                <div class="icon"></div>
+                <h2>Appointments Today</h2>
+                <h3></h3>
+            </div>
+            <div class="card income">
+                <div class="icon"></div>
+                <h2>Total Sales Today</h2>
+                <h3></h3>
+            </div>
+            <div class="card inventory">
+                <div class="icon"></div>
+                <h2>Total Inventory Value</h2>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="update-container">
+            <div class="booking-section">
+                <h2>Recent Bookings</h2>
+                <div class="updates" id="updates-list"></div>
+            </div>
+            <div class="stock-section">
+                <h2>Stock Level</h2>
+                <div class="updates" id="updates-list"></div>
+            </div>
+        </div>          
+    </div>
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>
+ 

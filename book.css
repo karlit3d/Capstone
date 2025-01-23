@@ -1,0 +1,960 @@
+/* SERVICE */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* image 22 */
+
+position: absolute;
+width: 1444px;
+height: 1114px;
+left: 0px;
+top: 0px;
+
+background: url(test2.png);
+
+
+/* Group 30 */
+
+position: absolute;
+width: 654px;
+height: 99px;
+left: 66px;
+top: 233px;
+
+
+
+/* Discover Our Range of Services */
+
+position: absolute;
+left: 0%;
+right: 1.53%;
+top: 6.93%;
+bottom: -33.19%;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 260%;
+/* identical to box height, or 125px */
+letter-spacing: -0.03em;
+
+color: #282959;
+
+
+
+/* OUR SERVICES // */
+
+position: absolute;
+left: 0%;
+right: 72.32%;
+top: 0%;
+bottom: 75.76%;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #FF0B0B;
+
+
+
+/* DIAGNOST */
+
+position: absolute;
+visibility: hidden;
+left: 31.35%;
+right: 0%;
+top: 23.14%;
+bottom: 0%;
+
+
+
+/* DIAGNOST */
+
+position: absolute;
+visibility: hidden;
+left: 31.35%;
+right: 0%;
+top: 23.14%;
+bottom: 0%;
+
+
+
+/* Component 3 */
+
+position: absolute;
+visibility: hidden;
+left: 0%;
+right: 70.72%;
+top: 23.14%;
+bottom: 0%;
+
+
+
+/* Car */
+
+position: absolute;
+width: 53px;
+height: 54px;
+left: 1155px;
+top: 157px;
+
+background: url(.png);
+
+
+/* People */
+
+position: absolute;
+width: 54px;
+height: 54px;
+left: 831px;
+top: 158px;
+
+background: url(.png);
+
+
+/* Group 56 */
+
+position: absolute;
+width: 29px;
+height: 18px;
+left: 142px;
+top: 63px;
+
+
+
+/* Line 15 */
+
+position: absolute;
+width: 29px;
+height: 0px;
+left: 142px;
+top: 63px;
+
+border: 4px solid #282959;
+
+
+/* Line 16 */
+
+position: absolute;
+width: 29px;
+height: 0px;
+left: 142px;
+top: 72px;
+
+border: 4px solid #282959;
+
+
+/* Line 17 */
+
+position: absolute;
+width: 29px;
+height: 0px;
+left: 142px;
+top: 81px;
+
+border: 4px solid #282959;
+
+
+/* Group 52 */
+
+position: absolute;
+width: 82px;
+height: 32px;
+left: 483px;
+top: 56px;
+
+
+
+/* Tech */
+
+position: absolute;
+width: 82px;
+height: 1px;
+left: 483px;
+top: 87px;
+
+font-family: 'Lora';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 2%;
+/* identical to box height, or 1px */
+
+color: #282959;
+
+
+
+/* AG */
+
+position: absolute;
+width: 51px;
+height: 1px;
+left: 498px;
+top: 56px;
+
+font-family: 'Lora';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 2%;
+/* identical to box height, or 1px */
+
+color: #282959;
+
+
+
+/* HOME */
+
+position: absolute;
+width: 62px;
+height: 20px;
+left: 736px;
+top: 63px;
+
+
+
+/* HOME */
+
+position: absolute;
+left: 0%;
+right: 4.84%;
+top: 0%;
+bottom: 0%;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height */
+
+color: #282959;
+
+
+
+/* ABOUT */
+
+position: absolute;
+width: 101px;
+height: 20px;
+left: 858px;
+top: 63px;
+
+
+
+/* ABOUT US */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height */
+
+color: #282959;
+
+
+
+/* SERVICES */
+
+position: absolute;
+width: 94px;
+height: 18px;
+left: 1019px;
+top: 63px;
+
+
+
+/* SERVICES */
+
+position: absolute;
+left: 0%;
+right: 1.06%;
+top: 0%;
+bottom: -11.11%;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height */
+
+color: #282959;
+
+
+
+/* Frame 3 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 4px;
+
+position: absolute;
+width: 57px;
+height: 20px;
+left: 1173px;
+top: 63px;
+
+
+
+/* PAGES */
+
+width: 57px;
+height: 20px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height */
+
+color: #282959;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chevron Down */
+
+display: none;
+width: 8px;
+height: 8px;
+
+background: url(.png);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* SERVICES */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 1281px;
+top: 63px;
+
+
+
+/* CONTACT */
+
+position: absolute;
+left: 0%;
+right: -29.03%;
+top: 0%;
+bottom: 0%;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height */
+
+color: #282959;
+
+
+
+/* Frame 18 */
+
+position: absolute;
+width: 1248px;
+height: 683px;
+left: calc(50% - 1248px/2 - 17px);
+top: 258px;
+
+
+
+/* Frame 57 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 151px 67px;
+
+position: absolute;
+width: 751px;
+height: 389px;
+left: 456px;
+top: 160px;
+
+background: url(image.png);
+border-radius: 50px;
+
+
+/* Genuine Auto Parts */
+
+width: 399px;
+height: 48px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/*  We offer a wide range of genuine auto parts to guarantee the highest quality and compatibility for your vehicle. */
+
+width: 396px;
+height: 100px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 25px;
+/* or 104% */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 13 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 25px;
+gap: 12px;
+
+width: 178px;
+height: 40px;
+
+background: #EE0B0B;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* BOOK NOW */
+
+width: 72px;
+height: 13px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 13px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 58 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-end;
+align-content: flex-start;
+padding: 0px;
+gap: 141px 84px;
+
+position: absolute;
+width: 835px;
+height: 431px;
+left: 330px;
+top: 139px;
+
+background: url(image.png);
+border-radius: 50px;
+
+
+/* Customer Support */
+
+width: 377px;
+height: 48px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Our friendly and knowledgeable staff is always ready to assist you with any questions or concerns. */
+
+width: 396px;
+height: 75px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 25px;
+/* or 104% */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 14 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 25px;
+gap: 12px;
+
+width: 178px;
+height: 40px;
+
+background: #EE0B0B;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* BOOK NOW */
+
+width: 72px;
+height: 13px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 13px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 56 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 167px 123px;
+
+position: absolute;
+width: 750px;
+height: 389px;
+left: 80px;
+top: 160px;
+
+background: url(image.png);
+border-radius: 50px;
+
+
+/* Quality Repairs */
+
+width: 414px;
+height: 64px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 64px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Our skilled technicians handle everything from minor repairs to major overhauls, ensuring your vehicle is safe and reliable. */
+
+width: 396px;
+height: 100px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 25px;
+/* or 104% */
+
+color: #F4F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 13 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 25px;
+gap: 12px;
+
+width: 198px;
+height: 44px;
+
+background: #EE0B0B;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* BOOK NOW */
+
+width: 72px;
+height: 13px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 13px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 53 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 183px;
+
+position: absolute;
+width: 835px;
+height: 431px;
+left: calc(50% - 835px/2 - 83.5px);
+top: calc(50% - 431px/2 + 13px);
+
+background: url(image.png), #D9D9D9;
+border-radius: 50px;
+
+
+/* Comprehensive Diagnostics */
+
+width: 765px;
+height: 64px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 64px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Utilizing state-of-the-art diagnostic tools, we accurately identify and resolve issues to ensure your vehicle performs at its best. */
+
+width: 396px;
+height: 100px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 25px;
+/* or 104% */
+
+color: #F4F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 11 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 25px;
+gap: 12px;
+
+width: 198px;
+height: 44px;
+
+background: #EE0B0B;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* BOOK NOW */
+
+width: 72px;
+height: 13px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 13px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 55 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 173px 125px;
+
+position: absolute;
+width: 931px;
+height: 480px;
+left: 172px;
+top: 112px;
+
+background: url(image.png);
+border-radius: 50px;
+
+
+/* Routine Maintenance */
+
+width: 582px;
+height: 64px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 64px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* From oil changes to brake inspections, our routine maintenance services help prolong the life of your vehicle and prevent costly repairs. */
+
+width: 396px;
+height: 100px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 25px;
+/* or 104% */
+
+color: #F4F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 12 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 25px;
+gap: 12px;
+
+width: 198px;
+height: 44px;
+
+background: #EE0B0B;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* BOOK NOW */
+
+width: 72px;
+height: 13px;
+
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 13px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chevron Right */
+
+position: absolute;
+width: 29px;
+height: 29px;
+left: 231px;
+top: 366px;
+
+background: url(.png);
+transform: rotate(180deg);
+
+
+/* Chevron Right */
+
+position: absolute;
+width: 29px;
+height: 29px;
+left: 1053px;
+top: 366px;
+
+background: url(.png);
+transform: matrix(1, 0, 0, -1, 0, 0);

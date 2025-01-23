@@ -1,0 +1,1811 @@
+/* For Webkit Browsers (Chrome, Safari, Edge, etc.) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Dark background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #333, #555); /* Dark gradient for the thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #1a1a1a; /* Border matching track for spacing */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #444, #666); /* Slightly lighter gradient on hover */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #555 #1a1a1a; /* Dark thumb color and darker track */
+}
+/* Bounce popup animation */
+@keyframes alertBounce {
+    0% {
+        transform: scale(0.5); /* Start smaller */
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1); /* Overshoot for bounce */
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.95); /* Slight bounce back */
+    }
+    100% {
+        transform: scale(1); /* Settle to final size */
+    }
+}
+
+/* Styling for alert overlay */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Alert box with bounce animation */
+.alert-box {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Proxima Nova', sans-serif;
+    max-width: 400px;
+    width: 80%;
+    text-align: center;
+    animation: alertBounce 0.3s ease-out; /* Apply bounce animation */
+}
+
+.alert-box h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #f86363;
+}
+
+.alert-box p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.alert-box button {
+    background-color: #f86363;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.alert-box button:hover {
+    background-color: #d94f4f;
+}
+/* Unique CSS for the custom green alert */
+.unique-green-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(97, 97, 97, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    pointer-events: auto; /* Ensure only the alert box is interactive */
+}
+
+.unique-green-alert-box {
+    background-color: #e6ffed;
+    border: 2px solid #28a745;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 80%;
+}
+
+.unique-green-alert-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.unique-green-alert-button:hover {
+    background-color: #218838;
+}
+
+.popup-close-button {
+    background-color: #28a745; /* Dark green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.popup-close-button:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+}
+
+body {
+    font-family: 'Proxima Nova';
+    margin: 0;
+    padding: 0;
+    background: white;
+    background-size: cover;
+    height: 100%;
+    background: url('SERVICE.png') no-repeat center center fixed;
+    background-size: cover;
+
+
+}
+
+header {
+    background: transparent;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Stack AG above Tech */
+    text-align: center;     /* Center the text */
+    color: #282959; /* Default color */
+    font-family: 'Georgia', serif; /* Choose a serif font */
+}
+
+.logo-ag {
+    font-size: 36px;        /* Large font size for "AG" */
+    font-weight: normal;      /* Bold text */
+    margin-bottom: -10px;   /* Slightly reduce the space between AG and Tech */
+}
+
+.logo-tech {
+    font-size: 40px;        /* Slightly smaller font size for "Tech" */
+    font-weight: normal;    /* Normal weight for "Tech" */
+    letter-spacing: -.5px;    /* Adds slight spacing between letters */
+}
+
+/* Ensure the off-screen menu or other elements don’t interfere */
+.off-screen-menu {
+    z-index: 1000; /* Keep it lower than the hamburger menu */
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Higher than the overlay */
+    margin-left: 40px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+
+.ham-menu span {
+    height: 4px;
+    width: 80%;
+    background-color: #282959;
+    border-radius: 25px;
+    position: absolute;
+    transition: .3s ease;
+}
+
+/* Position each bar */
+.ham-menu span:nth-child(1) {
+    top: 10px; /* Top bar */
+}
+
+.ham-menu span:nth-child(2) {
+    top: 22px; /* Middle bar */
+}
+
+.ham-menu span:nth-child(3) {
+    top: 34px; /* Bottom bar */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 70px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 18px;
+    color: #282959;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links li a:hover {
+    color: #282959;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    background: #f86363;
+}
+
+/* Header (Red) */
+.off-screen-menu .menu-header {
+    background-color: #B52B2B; /* Red background for the header */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Menu Body (Gray) */
+.off-screen-menu {
+    background-color: #e3e3e3; /* Gray background */
+    height: 100vh; /* Full height of the viewport */
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hides the menu off-screen initially */
+    z-index: 1000;
+    padding: 0;
+    transition: left 0.4s ease; /* Smooth transition when it opens */
+    overflow: hidden;
+}
+
+/* When the menu is active, slide it into view */
+.off-screen-menu.active {
+    z-index: 1001; /* Higher than the overlay */
+    left: 0; /* Slide the menu into view */
+}
+/* Menu Items */
+.off-screen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.off-screen-menu ul li {
+    margin: 30px 0;
+}
+
+.off-screen-menu ul li a,
+.off-screen-menu .login-item a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #6b6b6b; /* Gray color */
+    transition: color 0.3s ease;
+}
+
+.off-screen-menu ul li a:hover,
+.off-screen-menu ul li a.active,
+.off-screen-menu .login-item a:hover {
+    color: red; /* Red on hover or when active */
+}
+
+/* Position login item at the bottom */
+.off-screen-menu .login-item {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.off-screen-menu .login-item a:hover {
+    color: red;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    z-index: 900; /* Lower than the menu but higher than other elements */
+    display: none; /* Hidden by default */
+}
+
+/* Show the overlay when the menu is active */
+.off-screen-menu.active ~ .overlay {
+    display: block;
+}
+.menu-header {
+    background-color: #B52B2B; /* Red background */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    padding: 0 20px;
+    height: 50px;
+    position: relative;
+}
+
+.menu-logo {
+    width: 60px;
+    margin-right: 30px; /* Space between the logo and text */
+}
+
+.menu-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+h2 {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 42px;
+    color: #282959;
+    margin-bottom: 20px;
+    font-weight: 700;
+
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.step {
+    margin-top: 100px;
+    font-family: Proxima Nova;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;  
+    border: 5px solid #e7a8a8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #e7a8a8;
+}
+
+.step.active {
+    font-family: Proxima Nova;
+    background-color: transparent;
+    border-color: #e90000;
+    color: #e90000;
+}
+
+.line {
+    width: 120px;
+    height: 4px;
+    background: #e7a8a8;
+    margin: 0 10px;
+    margin-top: 100px;
+    border-top: 2px dashed #e7a8a8; /* Dashed line when inactive */
+    background: none; /* Remove the solid background */
+}
+
+.line.active {
+    background: #e90000; /* Solid background when active */
+    border-top: none; /* Remove dashed border when active */
+}
+
+.vehicle-info {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form-row {
+    font-family: Proxima Nova;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns label and input field vertically */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-group {
+    font-family: Proxima Nova;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px; /* Reduced margin for better alignment */
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-row .form-group:nth-child(2) {
+    margin-right: 0;
+    margin-left: 40px; /* Adjust this value to properly align with the first name */
+}
+
+label {
+    font-size: 30px;
+    color: #282959;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    text-transform: uppercase; 
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #282959;
+    background: #ebebeb;
+    color: black;
+    font-weight: bold;
+    width: 100%; /* Ensure full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+input[type="number"] {
+    text-transform: uppercase; 
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #282959;
+    background: #ebebeb;
+    color: black;
+    font-weight: bold;
+    width: 100%; /* Ensure full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+input::placeholder {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -.3px;
+    color: rgba(40, 41, 89, 0.56);
+}
+
+.cancel-button, .next-button {
+    padding: 18px 70px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #e90000;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+.cancel-button {
+    background-color: #e90000; /* Match the next button color */
+}
+
+.cancel-button:hover, .next-button:hover {
+    background-color: #c50101;
+}
+
+.next-button:hover, .back-button:hover {
+    background-color: #c50101;
+}
+
+#brand-suggestions {
+    background: white;
+    position: absolute;
+    top: 100%; /* Position the suggestions below the input field */
+    left: 0;
+    width: 100%;
+    max-width: 670px; /* Adjust the max-width for a smaller dropdown */
+    max-height: 300px; /* Reduced height for the dropdown */
+    overflow-y: auto;
+    z-index: 1000;
+    font-size: 14px; /* Smaller font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+#clear-btn {
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 460px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    color: #999;
+    cursor: pointer;
+}
+
+/* Hover effect on the clear button */
+#clear-btn:hover {
+    opacity: 0.7;
+}
+
+
+#brand-suggestions .suggestion {
+    padding: 8px; /* Smaller padding */
+    cursor: pointer;
+}
+
+#brand-suggestions .suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+.car-brand-label {
+    font-size: 30px;
+    color: #282959;
+    margin-right: 10px; /* Adds space between the label and the input field */
+}
+
+.search-container {
+    position: relative;
+    width: 100px; /* Adjusts the width of the container */
+}
+
+#car-brand {
+    text-transform: uppercase; 
+    padding: 5px 40px 5px 10px; /* Adds padding for the icon */
+    font-size: 18px;
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #000; /* Black border */
+    background: white;
+    color: #3f3d56; /* Darker text color */
+    font-weight: bold;
+    height: 50px;
+    width: 60%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+#car-brand::placeholder {
+    font-weight: bold;
+    color: #3f3d56; /* Placeholder text color */
+}
+
+.car-logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0px;
+}
+.large-select {
+    width: 100%; /* Makes the select box take up the full width of its container */
+    height: 50px; /* Increase the height for a larger appearance */
+    font-size: 20px; /* Increase the font size for better readability */
+    padding: 10px; /* Add padding for more space inside the select box */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 1px solid #282959; /* Border style */
+    background-color: #ebebeb; /* Background color */
+    color: black; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+.step-content {
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+}
+.required-asterisk {
+    color: red;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#contact-number::-webkit-outer-spin-button,
+#contact-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.step-title {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 42px;
+    color: #282959;
+    margin-bottom: 80px;
+    letter-spacing: -1px;
+    margin-left: 120px;
+    font-weight:700;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    row-gap: 20px;
+}
+
+.service {
+    width: 35%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9.9px rgba(2, 2, 2, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service span {
+    font-family: Proxima Nova;
+    margin-left: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #282959;
+}
+
+.service input[type="checkbox"] {
+    width: 27px;
+    height: 27px;
+    border: 5px solid red;
+    border-radius: 7px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.back-button-img {
+    width: 80px; /* Adjust the size to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Ensure it's clickable */
+    margin-left: 1490px; /* Add some space between the back and next buttons */
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.back-button-img:hover {
+    opacity: 0.8; /* Add a hover effect for better user interaction */
+}
+
+.step.visited {
+    background: #ffffff;
+    border-color: #e90000;
+    color: #e90000;
+}
+.line.visited {
+    background: #e90000;
+    border-top: none;
+}
+.back-button-img + .next-button {
+    padding: 18px 70px;
+    margin-top: 20px;
+    margin-right: 300px; /* Specific margin for the "Next" button next to the back button */
+}
+.calendar-time-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 30px;
+    margin-left: -180px;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10.4px 2px rgba(49, 53, 89, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    width: 1000px; /* Increased width for a larger calendar */
+    height: 450px;
+    margin-left: 300px;
+    margin-top: -20px;
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative; 
+    margin-bottom: 10px;
+}
+
+.month {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight:700;
+    font-size: 28px;
+    color: #282959;
+    text-align: center; /* Center the month text */
+    margin: 0 auto;
+}
+
+.chevron-left, .chevron-right {
+    font-size: 36px; /* Increased font size for the chevrons */
+    background-color: transparent;
+    border: none; 
+    cursor: pointer;
+    color: #282959;
+    height: 200px;
+    position: absolute; /* Allows placement on the left and right */
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.chevron-left {
+    left: 15px; /* Aligns to the left side */
+}
+
+.chevron-right {
+    right: 15px; /* Aligns to the right side */
+}
+
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    padding-top: 20px;
+    border-top: 20px solid white; /* Adds a border line to visually separate the month from the days */
+    margin-top: 10px;
+}
+
+.days div {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight:700;
+    font-size: 22px;
+    color: #282959;
+    text-align: center;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 50px; /* Add padding at the bottom of the dates */
+}
+
+.dates div {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight:700;
+    cursor: pointer;
+}
+
+.dates div.selected {
+    background-color: #e90000;
+    color: white;
+}
+
+/* Container for time slots and mechanics */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    width: 100%;
+    max-width: 1000px; /* Adjust width to fit content */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Container for time slots */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+    max-width: 800px; /* Maximum width */
+    justify-content: center;
+}
+
+/* Individual time slot */
+.time-slot {
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10.4px 2px rgba(49, 53, 89, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #282959;
+    cursor: pointer;
+    text-align: center;
+    width: 170px;
+}
+#time-slots-container h3 {
+    font-family: Proxima Nova;
+    margin-top: -30px;
+    font-size: 30px;
+    color: #282959;
+}
+
+.time-slot:hover {
+    background-color: #f0f0f0;
+}
+
+.time-slot.selected {
+    background-color: #e90000;
+    color: white;
+}
+
+.time-slot.fully-booked {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Container for mechanics */
+.mechanics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+    max-width: 800px; /* Maximum width */
+    justify-content: center;
+}
+
+/* Individual mechanic */
+.mechanic {
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10.4px 2px rgba(49, 53, 89, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #282959;
+    cursor: pointer;
+    text-align: center;
+    width: 170px;
+}
+
+#available-mechanics-container h3 {
+    font-family: Proxima Nova;
+    font-size: 30px;
+    color: #282959;
+}
+
+.mechanic.selected {
+    background-color: #e90000;
+    color: white;
+}
+
+.confirmation-box {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10.4px 2px rgba(49, 53, 89, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 50px 0;
+    width: 1300px;
+    height: 525px;
+    margin-left: 280px;
+    border: 1px solid #E7E7E7;
+    margin-top: 20px;
+}
+
+/* Ensure consistent flex properties */
+.label-style, .info-style {
+    flex: 1; /* Ensures all columns take up equal space */
+}
+
+/* Adjustments to the overall design */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+    margin-bottom: 30px;
+    border-bottom: 1px solid  #6E6F96;; /* Keeps a consistent border between rows */
+    padding: 5px 0;
+}
+
+/* CSS for making all review information uppercase */
+.confirmation-box .col {
+    text-transform: uppercase; /* Makes text uppercase */
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* CSS for changing the font color and allowing customization of the labels */
+.label-style {
+    flex: 1;
+    font-family: 'Proxima Nova', sans-serif; /* Change font family here */
+    font-size: 20px; /* Change font size here */
+    color: #6E6F96; /* Change font color here */
+    font-weight: 700;
+    margin-right: 10px; /* Reduce space between label and actual info */
+    padding-bottom: 10px; /* Add space between label and border */
+    padding-top: 10px;
+    opacity: 0.8;
+}
+
+/* Style for actual information */
+.info-style {
+    font-family: 'Proxima Nova', sans-serif; /* Change font family here */
+    font-size: 18px; /* Change font size here */
+    color:  #282959; /* Change font color here */
+    font-weight:800;
+    text-align: left;
+}
+.step4-title {
+    font-family: 'Proxima Nova', sans-serif; /* Default font family */
+    font-size: 38px; /* Default font size */
+    color: #282959; /* Default font color */
+    margin-top: -15px;
+    margin-bottom: 10px;
+    margin-left: 280px;
+    font-weight: 700;
+}
+
+/* Customizable styles for p in Step 4 */
+.step4-description {
+    font-family: 'Proxima Nova', sans-serif; /* Default font family */
+    font-size: 20px; /* Default font size */
+    color: #373737; /* Default font color */
+    margin-bottom: 20px;
+    margin-left: 280px;
+    line-height: 1.2;
+}
+
+
+#back-button-4 {
+    width: 80px; /* Adjust the size to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Ensure it's clickable */
+    margin-left: 1420px; /* Add some space between the back and next buttons */
+    margin-top: -35px;
+}
+#back-button-4 + #next-button-4 {
+    padding: 18px 70px;
+    margin-top: -35px;
+    margin-right: 290px; /* Specific margin for the "Next" button next to the back button */
+}
+#back-button-3 {
+    width: 80px; /* Adjust the size to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Ensure it's clickable */
+    margin-left: 1700px; /* Add some space between the back and next buttons */
+    margin-top: -25px;
+
+}
+#back-button-3 + #next-button-3 {
+    padding: 18px 70px;
+    margin-top: -25px;
+    margin-right: 150px; /* Specific margin for the "Next" button next to the back button */
+}
+.disabled {
+    color: #ccc;  /* Change text color to indicate it's disabled */
+    pointer-events: none;  /* Prevent any mouse events */
+    opacity: 0.6;  /* Make it look faded */
+}
+@keyframes slideInFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slightly slide from bottom */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End in the original position */
+    }
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95); /* Start slightly smaller for an elegant zoom-in */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* End at full size */
+    }
+}
+/* Apply section animations */
+.vehicle-info, .services, .calendar-time-container, .confirmation-box {
+    opacity: 0; /* Initially hidden */
+    animation: slideInFade 1s ease forwards;
+}
+
+/* Apply text animations */
+.vehicle-info h2, .vehicle-info p,
+.services h2, .services p,
+.calendar-time-container h2, .calendar-time-container p,
+.confirmation-box h2, .confirmation-box p {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInZoom 0.8s ease forwards;
+}
+
+@media only screen and (max-width: 1650px){
+    .back-button-img{
+        margin-left: 200px;
+    }
+    .back-button-img + .next-button{
+        margin-right: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 1280px){
+    .calendar{
+        width: 850px;
+        margin-left: 200px;
+    }
+    #back-button-3{
+        margin-left: 200px;
+    }
+
+    .confirmation-box{
+        margin-left: 0;
+        margin: 50px;
+        width: 1100px;
+    }
+    #back-button-4{
+        margin-left: 200px;
+    }
+    #back-button-4 + #next-button-4{
+        margin-right: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 1050px){
+    /*    Step 1   */
+    .ham-menu{
+        width: 40px;
+        height: 40px;
+    }
+    .logo-ag, .logo-tech{
+        font-size: 30px;
+    }
+
+    .nav-links li a{
+        font-size: 20px;
+    }
+
+    .progress-bar{
+        margin-top: 10px;
+    }
+    .line{
+        width: 100px;
+    }
+    .step{
+        width: 30px;
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .vehicle-info{
+        width: 90%;
+        padding: 0 10%;
+    }
+    h2{
+        font-size: 30px;
+    }
+    label{
+        font-size: 22px;
+    }
+    input[type="text"]{
+        font-size: 15px;
+    }
+    input[type="number"]{
+        font-size: 15px;
+    }
+    .car-brand-label{
+        font-size: 22px;
+    }
+    #car-brand{
+        padding: 4px 25px 4px 7px;
+        font-size: 15px;
+        height: 35px;
+    }
+
+    .car-logo{
+        width: 200px;
+    }
+    .large-select{
+        font-size: 15px;
+        height: 40px;
+    }
+
+    .cancel-button, .next-button{
+        font-size: 15px;
+        padding: 15px 35px;
+    }
+
+    /*    Step 2   */
+    .back-button-img{
+        margin-left: 200px;
+    }
+    .back-button-img + .next-button{
+        margin-right: 200px;
+    }
+    .step-title{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .service{
+        padding: 12px;
+    }
+    .services{
+        gap: 40px;
+    }
+    .service span{
+        font-size: 22px;
+    }
+    input[type="checkbox"]{
+        width: 15px;
+        height: 15px;
+    }
+
+    /*   Step 3   */
+    #back-button-3{
+        margin-left: 200px;
+        margin-top: 20px;
+    }
+    #back-button-3 + #next-button-3 {
+        margin-right: 200px;
+        margin-top: 20px;
+    }
+    .calendar{
+        width: 600px;
+        height: 300px;
+        margin-left: 220px;
+    }
+    .month{
+        font-size: 25px;
+    }
+    .chevron-left, .chevron-right{
+        font-size: 30px;
+    }
+    .days{
+        margin-top: 0px;
+        padding: 14px;
+        gap: 5%;
+    }
+    .days div{
+        font-size: 15px;
+    }
+    .dates div{
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #time-slots-container h3{
+        font-size: 25px;
+    }
+    #available-mechanics-container h3 {
+        font-size: 25px;
+    }
+
+    .time-slot, .mechanic{
+        width: 100px;
+        padding: 18px;
+    }
+    .time-slots{
+        grid-template-columns: repeat(2, 140px);
+    }
+    .mechanics-container{
+        grid-template-columns: repeat(2, 140px);
+    }
+
+    .step4-title{
+        margin-left: 300px;
+    }
+    .step4-description{
+        margin-left: 60px;
+    }
+    .confirmation-box{
+        
+        margin: 60px;
+        margin-left: 100px;
+        width: 800px;
+    }
+    .confirmation-box .col{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .ham-menu{
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+    .logo-ag, .logo-tech{
+        font-size: 20px;
+    }
+    .nav-links li a{
+        font-size: 12px;
+    }
+    .off-screen-menu{
+        width: 30%;
+        height: 100%;
+    }
+
+    .progress-bar{
+        margin-top: 10px;
+    }
+    .step{
+        width: 30px;
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .vehicle-info{
+        width: 80%;
+    }
+
+    /*    Step 2   */
+    .step-title{
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    .services{
+        gap: 30px;
+    }
+
+    /*    Step 3   */
+    .calendar{
+        width: 400px;
+        height: 280px;
+        margin-left: 220px;
+    }
+    .month{
+        font-size: 22px;
+    }
+    .chevron-left, .chevron-right {
+        font-size: 25px;
+    }
+    .dates{
+        gap: 5px;
+    }
+    #time-slots-container h3{
+        font-size: 18px;
+    }
+    #available-mechanics-container h3 {
+        font-size: 18px;
+    }
+
+    .step4-title {
+        margin-left: 200px;
+    }
+    .time-slots {
+        grid-template-columns: repeat(2, 120px);
+    }
+    .mechanics-container{
+        grid-template-columns: repeat(2, 120px);
+    }
+    .time-slot, .mechanic{
+        width: 85px;
+    }
+    .confirmation-box{
+        margin: 20px;
+        width: 680px;
+        height: 550px;
+    }
+
+}
+
+@media only screen and (max-width: 640px){
+    .vehicle-info{
+        width: 95%;
+    }
+    .nav-links li{
+        margin: 0 10px;
+    }
+    .nav-links li:last-child{
+        margin-right: 20px;
+    }
+    .ham-menu{
+        margin-right: 30px;
+    }
+    .progress-bar{
+        margin-left: 10%;
+    }
+
+    .back-button-img {
+        margin-left: 100px;
+    }
+    .back-button-img + .next-button {
+        margin-right: 100px;
+    }
+
+    .service span{
+        margin-left: 10px;
+    }
+
+    .calendar-time-container{
+        gap: 15px;
+    }
+    .time-slot, .mechanic {
+        width: 65px;
+        padding: 13px;
+        font-size: 13px;
+    }
+    .time-slots, .mechanics-container {
+        grid-template-columns: repeat(2, 80px);
+    }
+    #back-button-3 {
+        margin-left: 100px;
+    }
+    #back-button-3 + #next-button-3 {
+        margin-right: 100px;
+    }
+
+    .step4-title {
+        font-size: 28px;
+    }
+    .row{
+        margin-bottom: 15px;
+    }
+    .confirmation-box{
+        width: 500px;
+        height: 480px;
+        padding: 15px;
+        margin-left: 40px;
+    }
+    .confirmation-box .col {
+        font-size: 17px;
+    }
+
+    #back-button-4 {
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+
+    #back-button-4 + #next-button-4 {
+        margin-top: 10px;
+        margin-right: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+    nav{
+        justify-content: flex-start;
+    }
+    .ham-menu{
+        width: 30px;
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .ham-menu span:nth-child(2) {
+        top: 18px;
+    }
+    .ham-menu span:nth-child(3) {
+        top: 25px;
+    }
+    .logo-ag, .logo-tech{
+        margin-left: 20px;
+        margin-right: 40px;
+        font-size: 18px;
+    }
+    .logo-text{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .nav-links{
+        margin: 0;
+        margin-left: 40px;
+    }
+    .nav-links li{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .nav-links li:last-child{
+        margin-right: 0;
+    }
+    .nav-links li a{
+        font-size: 9px;
+    }
+    .off-screen-menu{
+        width: 35%;
+    }
+    .off-screen-menu ul li a{
+        font-size: 15px;
+    }
+    .menu-title{
+        font-size: 18px;
+    }
+    .off-screen-menu .login-item a{
+        font-size: 18px;
+    }
+    .menu-logo{
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .progress-bar{
+        margin-top: 0;
+        margin-left: 3%;
+        padding-top: 0;
+    }
+    .step{
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+    }
+    .line{
+        width: 40px;
+    }
+
+    .vehicle-info{
+        width: 90%;
+        margin: 0 0;
+        padding: 0 20px;
+    }
+    .form-group{
+        margin-right: 40px;
+    }
+    h2{
+        text-align: center;
+        font-size: 25px;
+    }
+    label{
+        font-size: 14px;
+    }
+    input[type="text"]{
+        font-size: 10px;
+        width: 100%;
+    }
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder{
+        font-size: 10px;
+    }
+    input[type="number"]{
+        font-size: 10px;
+        width: 100%;
+    }
+    .car-brand-label{
+        font-size: 17px;
+    }
+    #car-brand{
+        font-size: 12px;
+    }
+    .large-select{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .cancel-button, .next-button{
+        font-size: 12px;
+        padding: 12px 30px;
+    }
+
+    /*    Step 2   */
+    .step-title{
+        font-size: 22px;
+        margin-left: 30px;
+    }
+    .service span{
+        margin-left: 20px;
+        font-size: 15px;
+    }
+    .service{
+        padding: 7px;
+    }
+    .service input[type="checkbox"]{
+        width: 15px;
+        height: 15px;
+    }
+
+    .back-button-img{
+        width: 40px;
+        margin-left: 50px;
+    }
+    .back-button-img + .next-button{
+        padding: 12px 30px;
+        margin-right: 50px;
+    }
+    .services{
+        gap: 20px;
+    }
+
+    /*Step 3*/
+    .step-title{
+        font-size: 18px;
+    }
+    .calendar{
+        margin-left: 10px;
+        width: 260px;
+        height: 170px;
+    }
+    .days{
+        border-top: 10px;
+        gap: 2%;
+    }
+    .days div{
+        font-size: 12px;
+    }
+    .dates{
+        gap: 3px;
+    }
+    .dates div{
+        font-size: 9px;
+        padding: 3px;
+    }
+    .month{
+        font-size: 15px;
+    }
+    .month-navigation{
+        margin-bottom: 0px;
+    }
+    .chevron-left, .chevron-right{
+        font-size: 20px;
+    }
+
+    #time-slots-container h3{
+        font-size: 15px;
+        padding-top: 40px;
+        padding-left: 20px;
+    }
+    #available-mechanics-container h3{
+        font-size: 15px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .calendar-time-container{
+        display: block;
+        margin-left: 0;
+    }
+
+    #back-button-3{
+        margin-left: 40px;
+        width: 30px;
+    }
+    #back-button-3 + #next-button-3{
+        margin-right: 40px;
+        padding: 10px 25px;
+    }
+
+    .time-slots, .mechanics-container {
+        grid-template-columns: repeat(2, 150px);
+    }
+    .time-slot, .mechanic {
+        width: 80px;
+        padding: 13px;
+        font-size: 13px;
+    }
+
+    .step4-title {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .step4-description {
+        font-size: 11px;
+        margin-left: 40px;
+    }
+    .confirmation-box{
+        width: 300px;
+        height: 380px;
+        margin-left: 50px;
+    }
+    .confirmation-box .col {
+        font-size: 9px;
+    }
+
+    #back-button-4 {
+        margin-left: 40px;
+        width: 30px;
+    }
+    #back-button-4 + #next-button-4 {
+        margin-right: 40px;
+        padding: 10px 25px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    header{
+        padding: 10px 0;
+    }
+    .ham-menu{
+        margin-top: 5px;
+        width: 30px;
+        height: 40px;
+        margin-right: 5px;
+    }
+    .ham-menu span{
+        height: 3px;
+    }
+    .ham-menu span:nth-child(2) {
+        top: 15px;
+    }
+    .ham-menu span:nth-child(3) {
+        top: 20px;
+    }
+    .off-screen-menu ul li a{
+        font-size: 11px;
+    }
+    .menu-title{
+        font-size: 13px;
+    }
+    .menu-logo{
+        margin-right: 5px;
+    }
+    .off-screen-menu .login-item a{
+        font-size: 13px;
+    }
+    .logo-ag, .logo-tech{
+        font-size: 15px;
+        margin-right: 30px;
+    }
+    .nav-links li:last-child{
+        margin-right: 10px;
+    }
+    .nav-links li a{
+        font-size: 8px;
+    }
+
+    .progress-bar{
+        margin-top: 0;
+        margin-left: 2%;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+    .line{
+        width: 30px;
+    }
+    .step{
+        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #e7a8a8;
+    }
+
+    .vehicle-info{
+        width: 90%;
+    }
+    .form-group {
+        margin-right: 30px;
+    }
+    input[type="text"]{
+        font-size: 9px;
+        width: 100%;
+    }
+    input[type="number"]{
+        font-size: 9px;
+        width: 100%;
+    }
+    .car-brand-label{
+        font-size: 15px;
+        padding-left: 30px;
+    }
+    #car-brand {
+        font-size: 9px;
+    }
+    .form-row{
+        margin-bottom: 20px;
+    }
+    .form-row .form-group:nth-child(2) {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+
+    .car-logo{
+        width: 160px;
+    }
+    .large-select{
+        font-size: 9px;
+        width: 100%
+    }
+    .cancel-button, .next-button {
+        font-size: 9px;
+        padding: 10px 18px;
+        margin-left: 0;
+    }
+    /*   Step 2   */
+    .step-title{
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .service span{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .service input[type="checkbox"] {
+        width: 12px;
+        height: 12px;
+    }
+    .back-button-img {
+        width: 30px;
+        margin-left: 40px;
+    }
+    .back-button-img + .next-button {
+        padding: 10px 25px;
+        margin-right: 40px;
+    }
+
+    /*   Step 3   */
+    .calendar{
+        padding: 10px;
+        margin-top: 15px;
+        width: 230px;
+        height: 180px;
+    }
+
+    .time-slots, .mechanics-container {
+        grid-template-columns: repeat(2, 120px);
+    }
+    .time-slot, .mechanic {
+        width: 75px;
+    }
+
+
+    .confirmation-box {
+        width: 260px;
+        height: 365px;
+        padding: 12px;
+        margin: 10px;
+        margin-left: 30px;
+    }
+
+}

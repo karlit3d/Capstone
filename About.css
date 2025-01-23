@@ -1,0 +1,382 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    background: url('ABOUT.png') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover;
+}
+
+header {
+    background: transparent; /* Make header background transparent */
+    padding: 20px 0;
+    position: absolute; /* Position it absolutely so it overlays the background */
+    width: 100%; /* Ensure it covers the full width */
+    z-index: 1000; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Stack AG above Tech */
+    align-items: center; /* Center the text horizontally */
+    margin-right: 850px; /* Adjust spacing between the menu and text */
+    line-height: 1; /* Ensure there's no extra space between AG and Tech */
+    color: #000;
+}
+
+.logo-ag {
+    font-family: 'Lora', serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.logo-tech {
+    font-family: 'Lora', serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: -70px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    border-radius: 25px;
+    position: absolute;
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+
+.ham-menu span:nth-child(2){
+    top: 50%;
+}
+
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 70px; /* Added margin to the right of Diagnostic Tool */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+}
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links li a:hover {
+    color: #EE0B0B; /* Red color on hover */
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    background: #EE0B0B; /* Red color on hover */
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+    background-color: white;
+    height: 100vh;
+    width: 15%;
+    max-width: 450px;
+    position: fixed;
+    top: 20px; /* Add margin from the top */
+    left: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Change to flex-start to align items to the top */
+    padding-top: 40px; /* Add padding to position the menu items */
+    align-items: left;
+    text-align: left;
+    font-size: 24px;
+    transition: .3s ease;
+}
+
+.off-screen-menu ul {
+    padding-left: 20px; /* Add padding to align items properly */
+}
+
+.off-screen-menu ul li {
+    list-style: none;
+    margin: 20px 0; /* Adjust margin to space out items */
+}
+
+.off-screen-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+}
+
+.off-screen-menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.off-screen-menu ul li a:hover {
+    color: #EE0B0B; /* Red color on hover */
+}
+
+.off-screen-menu ul li a:hover::after{
+    width: 100%;
+    background: #EE0B0B; /* Red color on hover */
+}
+
+.off-screen-menu.active {
+    left: 0;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 50px 0;
+}
+
+.hero .info-box {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding-bottom: 100px;
+}
+
+.hero .info-box .info-item {
+    display: flex;
+    align-items: center;
+    text-align: left; 
+    margin-top: 0; /* Reduce or remove top margin to bring items closer together */
+    gap: 10px;
+}
+
+.hero .info-box .info-item img {
+    width: 110px; /* Adjust as needed */
+    height: 120px; /* Adjust as needed */
+    margin-right: 10px;
+    margin-top: 80px;
+
+}
+
+.hero .info-box .info-item h3 {
+    font-weight: 700;
+    color: #282959;
+    font-size: 32px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 80px;
+}
+
+.hero .info-box .info-item p {
+    font-size: 16px;
+    color: #656565;
+    letter-spacing: 0.14em;
+    margin: 0;
+}
+
+.hero .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.hero .hero-content .hero-text {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.hero .hero-content .hero-text h1 {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight:700;
+    font-size: 36px;
+    color: #282959;
+    margin: 0; /* Remove margin to bring it closer to the h2 */
+    line-height: 1.2; /* Adjust line-height to reduce space between lines */
+}
+
+.hero .hero-content .hero-text h1 .highlight {
+    color: #EE0B0B; /* Red color for AG TECH */
+}
+
+.hero .hero-content .hero-text h2 {
+    font-family: 'Proxima Nova', sans-serif;;
+    font-weight:700;
+    font-size: 24px;
+    color: #FF0B0B;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.hero .hero-content .hero-text p {
+    font-size: 20px;
+    color: #373737;
+    line-height: 1.5;
+    margin-right: 200px;
+    text-align: justify;
+}
+
+.hero .hero-content .btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: #EE0B0B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 39px;
+    text-decoration: none;
+}
+
+.hero .hero-content .hero-image {
+    flex: 1;
+}
+
+.hero .hero-content .hero-image img {
+    width: 80%;
+    height: auto;
+    margin-left: 200px;
+}
+
+/* Footer Styles */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    background: rgba(44, 44, 44, 0.17);
+    background-image: url('footerbg.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 30px; /* Ensure footer covers the entire area */
+    margin: 0; /* Remove any default margin */
+    min-height: 150px; /* Ensure enough vertical space */
+}
+
+footer .experience-box {
+    display: flex;
+    justify-content: space-around;
+    color: #EDEDF3;
+}
+
+footer .experience-box .experience-item {
+    text-align: center;
+    margin: 0;
+    padding: 0; 
+}
+
+footer .experience-box .experience-item h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+footer .experience-box .experience-item p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+.footer-icon {
+    margin-bottom: 10px; /* Space between icon and text */
+}
+.footer-icon.icon1 {
+    width: 80px;
+    height: auto;
+}
+
+.footer-icon.icon2 {
+    width: 100px;
+    height: auto;
+}
+
+.footer-icon.icon3 {
+    width: 80px;
+    height: auto;
+}
+
+.footer-icon.icon4 {
+    width: 80px;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 340px; /* Adjust the position of the text */
+    right: 955px; /* Adjust the position of the text */
+    color: white;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background for better readability */
+    padding: 30px; /* Padding around the text */
+}
+
+.overlay-text h3 {
+    font-size: 24px; /* Adjust the size of the heading */
+    margin: 0;
+    font-weight: bold;
+}
+
+.overlay-text p {
+    font-size: 24px; /* Adjust the size of the paragraph */
+    margin: 5px 0 0;
+}

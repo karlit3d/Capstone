@@ -1,0 +1,1089 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Matching header from admin-inventory */
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    
+}
+.header-left h1 {
+    font-family: 'Lora', serif; 
+    font-size: 24px;
+    font-weight: 700;
+    color: #282959;
+    letter-spacing: -1px;
+    padding-left: 0;
+    
+}
+.header-left h2 {
+
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: red;
+    letter-spacing: -1px;
+    
+}
+.header-left .nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: 450px;
+}
+
+.header-left .nav-item {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border: 1px solid #80808A; /* Default border */
+    color: #80808A; /* Default text color */
+}
+
+/* Style for active nav item */
+.header-left .nav-item.active {
+    background-color: #E3DCDC;
+    color: #E15E5E;
+    border: none; /* Remove border for active */
+}
+
+.header-left .nav-item.inactive {
+    border: 1px solid #80808A;
+    color: #80808A;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right p {
+    margin-right: 25px;
+    font-size: 20px;
+    color: #80808A;
+    margin-right: 10px;
+}
+.header-right .profile-pic {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-image: url('profile_icon.png');
+    background-size: cover;
+    margin-right: 118px;
+}
+/* Heading Section */
+.booking-header { 
+    text-align: left;
+    margin-left: 50px;
+    font-family: 'Proxima Nova', sans-serif;
+    padding-top: 100px;
+}
+
+.booking-header h1 {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #3A3B66;
+    font-size: 32px;
+    font-weight: 900;
+    color: #282959;
+}
+
+.booking-header .subheading {
+    color: #80808A;
+    margin-top: -10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Tabs Container */
+.tab-container {
+    background-color: #efeeee;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px;
+    display: flex; 
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    font-weight: 700;
+    font-size: 15px;
+    color:#80808A;
+}
+
+.tab:hover {
+    background-color: #bfbfbf;
+}
+
+.tab.active {
+    background-color: #ffffff;
+    color: #282959;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.256);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+    gap: 8px; /* Slightly larger space between day cells */
+    max-width: 55%; /* Moderate calendar width */
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 20px; /* Slightly larger font size */
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center; /* Center the text */
+}
+
+/* Past dates with lower opacity */
+.past-day {
+    color: #282959; /* You can adjust the color as needed */
+    opacity: 0.5; /* Lower opacity for past dates */
+}
+
+
+/* Hover effect for past days (optional, can remove or change if needed) */
+.past-day:hover {
+    background-color: #e0e0e0; /* Slight background color change on hover */
+    opacity: 0.9; /* Increase opacity on hover */
+}
+
+/* Adjust day circles to be slightly bigger */
+.calendar-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;  /* Adjust width */
+    height: 40px; /* Make it a perfect circle */
+    border-radius: 5%; /* Ensures the circle shape */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.calendar-day:hover {
+    background-color: #dcdcdc;
+    transform: scale(1.08); /* Slight hover zoom effect */
+}
+
+.calendar-day.selected {
+    background-color: #e74c3c;
+    color: white;
+    transform: scale(1);
+}
+
+/* Adjust days of the week */
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Align with calendar days */
+    gap: 8px;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 0;
+    font-size: 22px; /* Slightly larger font for days of the week */
+    max-width: 55%;
+    margin: 10px auto;
+}
+
+.days-of-week div {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #282959;
+}
+
+/* Month Selector */
+.month-selector {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+    align-items: center;    
+}
+
+.month-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* Adjust the size of the icons */
+    color: #282959;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.month-button:hover {
+    color: #3b3c6d;
+}
+
+.month-button i {
+    pointer-events: none; /* So the icon itself doesn't prevent clicking the button */
+}
+
+
+.month-name {
+    font-weight: bold;
+    font-size: 30px;
+    color: #282959;
+    letter-spacing: -.5px;
+}
+
+/* Appointments List */
+.appointments-list {
+    margin-top: 20px;
+}
+
+.booking-card {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Edit Button */
+.edit-btn {
+    background-color: #f0f0f0;  /* Soft grey background */
+    color: #666;  /* Darker text color */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;  /* Rounded corners */
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.edit-btn i {
+    margin-left: 5px;
+}
+
+/* Popup positioning aligned to the right of the Edit button */
+#edit-popup {
+    position: absolute;
+    top: 100%;  /* Positioned below the button */
+    left: -70px;  /* Adjust this if you need more leftward positioning */
+    background-color: #A0A0A0;
+    border-radius: 10px;
+    border: 1.5px solid #80808A;
+    margin-top: 10px;  /* 10px space between the button and the popup */
+    opacity: 0;  /* Start with the popup hidden */
+    transform: translateY(-10px);  /* Start slightly above */
+    transition: opacity 0.3s ease, transform 0.3s ease;  /* Smooth transition */
+}
+
+/* When active, the popup becomes visible and drops down */
+#edit-popup.active {
+    opacity: 1;
+    transform: translateY(0);  /* Move into position smoothly */
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #F2F2F2;  /* White background */
+    padding-right: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 175px;
+}
+
+/* List styling */
+.popup-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-content li {
+    padding: -8px;
+    margin-bottom: 5px;
+}
+
+.popup-content li button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;  /* No background */
+    color: #80808A;  /* Dark text */
+    letter-spacing: -.5px;
+    font-weight: 600;
+    font-size: 13px;
+    border: none;
+    text-align: left;  /* Align text to the left */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup-content li button:hover {
+    background-color: #e1dfdf;  /* Light background on hover */
+}
+
+/* Remove the close button styling */
+.close-popup {
+    display: none;
+}
+/* Icon styles for the popup items */
+.icon-approve::before {
+    content: '\f00c'; /* FontAwesome check icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.icon-decline::before {
+    content: '\f00d'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+.icon-sms-history::before {
+    content: '\f0e0'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.icon-cancel::before {
+    content: '\f00d'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.icon-reschedule::before {
+    content: '\f073'; /* FontAwesome calendar icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.icon-finish::before {
+    content: '\f091'; /* FontAwesome flag icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 8px;
+    font-weight: 900;
+}
+
+.icon-retrieve::before {
+    content: '\f829'; /* FontAwesome flag icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 8px;
+    font-weight: 900;
+}
+
+/* Appointment card container */
+.appointment-card {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin-left: 60px;
+    justify-content: space-between;
+    padding: 0;
+    border: 1.5px solid #80808A;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+
+}
+
+/* Styling for the "No pending appointments" message */
+#pending-list.appointments-list pending-list p {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin: 0px 0;
+    font-weight: bold;
+    background-color: #f8d7da;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;  /* Makes the text italic */
+}
+/* Pagination controls styling */
+/* Pagination controls styling */
+#past #pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+#past #pagination-controls button,
+#past #pagination-controls .page-number {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Disabled button styling */
+#past #pagination-controls button:disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+/* Hover effect for pagination buttons */
+#past #pagination-controls button:not(:disabled):hover,
+#past #pagination-controls .page-number:not(.active):hover {
+    background-color: #ddd;
+}
+
+/* Active page styling */
+#past #pagination-controls .page-number.active {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+#cancelled #cancelled-pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+#cancelled #cancelled-pagination-controls button,
+#cancelled #cancelled-pagination-controls .page-number {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Disabled button styling */
+#cancelled #cancelled-pagination-controls button:disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+/* Hover effect for pagination buttons */
+#cancelled #cancelled-pagination-controls button:not(:disabled):hover,
+#cancelled #cancelled-pagination-controls .page-number:not(.active):hover {
+    background-color: #ddd;
+}
+
+/* Active page styling */
+#cancelled #cancelled-pagination-controls .page-number.active {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+
+/* Date section */
+.appointment-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 30px;
+    border-right: 2px solid #e0e0e0;
+}
+
+.appointment-date .day {
+    font-size: 20px;
+    padding-left: 35px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+.appointment-date .date {
+    font-size: 40px;
+    margin-top: 5px;
+    padding-left: 35px;
+    color: #333;
+    font-weight: bold;
+}
+.pending-month-header {
+    font-size: 30px; /* Adjust the font size */
+    font-weight: bold; /* Make the font bold */
+    color: #1f1f3e; /* Header text color */
+    margin: 15px 0; /* Space above and below the header */
+    border-bottom: 2px solid #e0e0e0; /* Optional: add a bottom border for emphasis */
+    padding-bottom: 5px; /* Space between the text and the border */
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.past-month-header {
+    font-size: 30px; /* Adjust the font size */
+    font-weight: bold; /* Make the font bold */
+    color: #1f1f3e; /* Header text color */
+    margin: 15px 0; /* Space above and below the header */
+    border-bottom: 2px solid #e0e0e0; /* Optional: add a bottom border for emphasis */
+    padding-bottom: 5px; /* Space between the text and the border */
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.cancelled-month-header {
+    font-size: 30px; /* Adjust the font size */
+    font-weight: bold; /* Make the font bold */
+    color: #1f1f3e; /* Header text color */
+    margin: 15px 0; /* Space above and below the header */
+    border-bottom: 2px solid #e0e0e0; /* Optional: add a bottom border for emphasis */
+    padding-bottom: 5px; /* Space between the text and the border */
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+/* Appointment details section */
+.appointment-details {
+    flex-grow: 1;
+    padding-left: 30px; 
+    
+}
+
+.appointment-details h3.client-name {
+    padding-top: 10px;
+    font-size: 25px;
+    color: #1f1f3e;
+    margin: 0;
+    font-weight: bold;
+}
+
+.appointment-details p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #807d85;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.appointment-details i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-vehicle,
+.service-mechanic {
+    display: inline-block; /* Make them inline elements */
+    vertical-align: top; /* Align items at the top */
+    margin-right: 30px; /* Add spacing between the groups */
+}
+
+.time-platenumber {
+    display: inline-block; /* Make them inline elements */
+    vertical-align: top; /* Align items at the top */
+    margin-right: 30px; /* Add spacing between the groups */
+}
+/* Remove margin for elements inside the contact-vehicle and service-mechanic to keep them close */
+.contact,
+.vehicle,
+.service,
+.mechanic,
+.time,
+.platenumber {
+    margin: 0; /* Remove margin to avoid extra spacing */
+}
+
+/* Time display */
+.time {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+/* Edit button */
+.appointment-actions .edit-btn {
+    padding: 15px 40px;
+    background-color: #F2F2F2;
+    margin-right: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: #80808A;
+}
+
+.appointment-actions .edit-btn:hover {
+    background-color: #e0e0e0; /* Darken the background on hover */
+    color: #000;
+}
+
+.appointment-actions .edit-btn i.icon-dropdown {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+/* Icon styles */
+.icon-service::before {
+    content: '\f7d9'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.icon-vehicle::before {
+    content: '\f5e4'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.icon-time::before {
+    content: '\f017'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+.icon-platenumber::before {
+    content: '\f2bb'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.icon-contact::before{
+    content: '\f095'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+.icon-mechanic::before{ 
+    content: '\f183'; /* FontAwesome times (x) icon */
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-weight: 900;
+}
+.time-slot-header {
+    font-size: 30px; /* Adjust the font size */
+    font-weight: bold; /* Make the font bold */
+    color: #1f1f3e; /* Header text color */
+    margin: 15px 0; /* Space above and below the header */
+    border-bottom: 2px solid #e0e0e0; /* Optional: add a bottom border for emphasis */
+    padding-bottom: 5px; /* Space between the text and the border */
+    margin-left: 50px;
+    margin-top: 50px;
+}
+/* Style for the "No upcoming appointments" message */
+.no-appointments-message {
+    font-size: 1.2rem; /* Font size */
+    color: #666; /* Text color */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Margin above and below the message */
+    font-weight: bold; /* Make the text bold */
+    background-color: #f8d7da; /* Light red background */
+    padding: 15px; /* Padding around the message */
+    border: 1px solid #f5c6cb; /* Border color matching background */
+    border-radius: 5px; /* Rounded corners */
+}
+.popup-container {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reschedule-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+.reschedule-popup-content h3 {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #282959;
+}
+.reschedule-popup-content h4 {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: #282959;
+}
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative; 
+    margin-bottom: 10px;
+}
+
+.month {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #282959;
+    text-align: center;
+    margin: 0 20px; /* Space between chevrons and month text */
+}
+
+.chevron-left, .chevron-right {
+    font-size: 36px;
+    background-color: transparent;
+    border: none; 
+    cursor: pointer;
+    color: #282959;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.dates div {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.dates div.selected {
+    background-color: #282959; /* Highlight selected date */
+    color: white;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.time-slot {
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10.4px 2px rgba(49, 53, 89, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #282959;
+    cursor: pointer;
+    text-align: center;
+}
+
+.time-slot:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.time-slot.selected {
+    background-color: #282959; /* Highlight selected time slot */
+    color: white;
+}
+
+.time-slot.fully-booked {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.mechanics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.available-mechanic {
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10.4px 2px rgba(49, 53, 89, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #282959;
+    cursor: pointer;
+    text-align: center;
+}
+
+.available-mechanic.selected {
+    background-color: #282959; /* Highlight selected mechanic */
+    color: white;
+}
+
+#available-mechanics h4 {
+    font-size: 24px;
+    color: #282959;
+    margin-top: 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid white; /* Adds a border line to visually separate the month from the days */
+    margin-top: -5px;
+}
+
+.days div {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight:800;
+    font-size: 16px;
+    color: #282959;
+    text-align: center;
+}
+.popup-buttons {
+    display: flex;                       /* Use flexbox for horizontal alignment */
+    justify-content: space-between;      /* Space out the buttons */
+    margin-top: 20px;                   /* Add some space above the buttons */
+}
+
+.popup-buttons button {
+    background-color: #282959;          /* Dark background color for buttons */
+    color: #ffffff;                     /* White text color */
+    border: none;                       /* Remove default border */
+    border-radius: 5px;                /* Rounded corners */
+    padding: 10px 20px;                /* Padding for button size */
+    font-size: 16px;                   /* Font size for readability */
+    cursor: pointer;                    /* Change cursor on hover */
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+    width: 45%;                        /* Set a width for consistency */
+}
+
+.popup-buttons button:hover {
+    background-color: #4CAF50;          /* Change background color on hover */
+}
+
+#cancel-reschedule {
+    background-color: #f44336;          /* Red background for cancel button */
+}
+
+#cancel-reschedule:hover {
+    background-color: #e53935;          /* Darker red on hover */
+}
+
+#confirm-reschedule {
+    background-color: #282959;          /* Green background for confirm button */
+}
+
+#confirm-reschedule:hover {
+    background-color: #43a047;          /* Darker green on hover */
+}
+
+#cancelled .calendar-container {
+    display: none; /* Ensure calendar is hidden in Cancelled tab */
+    color: white;
+}
+.sms-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 650px;
+    border: 2px;
+    background-color: white;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.sms-popup-content {
+    text-align: left;
+}
+.sms-buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns the buttons to the right */
+    gap: 10px; /* Adds space between the buttons */
+    margin-top: 0px;
+}
+.sms-close-btn {
+    display: block;
+    margin: 0px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 584px;
+    margin-top: 12px;
+}
+.sms-resend-btn {
+    display: block;
+    margin: 0px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #282959;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+.sms-log {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 21px 0;
+    margin-right: 20px;
+}
+
+.sms-container {
+    position: relative;
+    padding: 10px;
+    background-color: #f1f0f0;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    max-width: 54%;
+    margin-bottom: 10px;
+    height: auto;
+    line-height: 2;
+}
+
+.sms-container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: -10px; /* Moves the tail to the right side */
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #f1f0f0; /* Matches the background color */
+}
+
+.sms-message {
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.sms-sent-time-status {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 4px;
+    margin-left: 265px;
+}
+
+
+/* Apply red border if the status is failed */
+.sms-log-failed {
+    border-color: red;
+}
+
+.sms-log-success {
+    border-color: black;
+}
+
+
+/* Adjust the status display */
+.sms-status {
+    margin-top: 3px;
+    font-weight: bold;
+    margin-left: 420px;
+}
+.sms-popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.appointment-info .appointment-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.appointment-info .appointment-contact {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    margin-left: 20px;
+}
+
+.sms-sent-date {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 23px;
+    margin-right: 320px;
+}
+.sms-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.sms-history-box {
+    border: 2px solid black; /* Outer border */
+    padding: 15px; /* Space inside the border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* White background for contrast */
+    max-height: 430px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Enables vertical scrolling */
+}

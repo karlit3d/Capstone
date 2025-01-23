@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Tech Appointment Booking</title>
+    <link rel="stylesheet" href="Appointment.css">
+</head>
+<body>
+    <header>
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="SAMPLE.html">Home</a></li>
+                <li><a href="SAMPLE.html#hero" id="about-link">About Us</a></li>
+                <li><a href="SAMPLE.html#services">Services</a></li>
+                <li><a href="Appointment.html">Book</a></li>
+                <li><a href="#">Diagnostic Tool</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="ham-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo-text">
+                <span class="logo-ag">AG</span>
+                <span class="logo-tech">Tech</span>
+            </div> 
+            <ul class="nav-links">
+                <li><a href="SAMPLE.html">HOME</a></li>
+                <li><a href="SAMPLE.html#hero" id="about-link-nav">ABOUT US</a></li>
+                <li><a href="SAMPLE.html#services">SERVICES</a></li>
+                <li><a href="Appointment.html">BOOK</a></li>
+                <li><a href="#">DIAGNOSTIC TOOL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Progress bar -->
+        <div class="progress-bar">
+            <div class="step active">1</div>
+            <div class="line active"></div>
+            <div class="step">2</div>
+            <div class="line"></div>
+            <div class="step">3</div>
+            <div class="line"></div>
+            <div class="step">4</div>
+        </div>
+        
+        <!-- Step 1: Vehicle Information Section -->
+        <section class="vehicle-info step-content active">
+            <h2>Vehicle Information</h2>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name"> First Name: <span class="required-asterisk">*</span></label>
+                    <input type="text" id="first-name" placeholder="First Name" required>
+                    <small class="error-message">This field is required.</small>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name:<span class="required-asterisk">*</span></label>
+                    <input type="text" id="last-name" placeholder="Last Name" required>
+                    <small class="error-message">This field is required.</small>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contact-number">Contact Number: <span class="required-asterisk">*</span></label>
+                    <input type="number" id="contact-number" placeholder="Contact Number" required>
+                    <small class="error-message">This field is required.</small>
+                </div>
+                <div class="form-group">
+                    <label for="plate-number">Plate Number: <span class="required-asterisk">*</span></label>
+                    <input type="text" id="plate-number" placeholder="Plate Number" required>
+                    <small class="error-message">This field is required.</small>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <label for="car-brand" class="car-brand-label">Car Brand: <span class="required-asterisk">*</span></label>
+                <div class="form-group search-container">
+                    <input type="text" id="car-brand" placeholder="Search..." autocomplete="off" required>
+                    <div id="brand-suggestions"></div> <!-- For displaying brand suggestions -->
+                    <small class="error-message">This field is required.</small>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <img src="newlogo.png" alt="Car Brand Logo" class="car-logo" id="car-logo">
+                </div>
+            </div>
+             
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="car-model">Car Model: <span class="required-asterisk">*</span></label>
+                    <select id="car-model" class="large-select" required>
+                        <option value="" disabled selected>Select a car model</option>
+                    </select>
+                    <small class="error-message">This field is required.</small>
+                </div>
+                <div class="form-group">
+                    <label for="car-year">Car Year Model: <span class="required-asterisk">*</span></label>
+                    <select id="car-year" class="large-select" required>
+                    </select>
+                    <small class="error-message">This field is required.</small>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <button class="cancel-button" type="button" onclick="window.location.href='SAMPLE.html'">Cancel</button>
+                <button class="next-button">Next</button>
+            </div>
+        </section>
+
+        <!-- Step 2 and onward: Add similar sections here -->
+        <section class="step-content">
+            <h2 class="step-title">Select Your Service</h2>
+            <div class="services">
+                <div class="service">
+                    <span>Oil Change</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Brake Inspection</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Tire Rotation</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Engine Check</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>General Wiring</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Transmission</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Preventive Maintenance Schedule</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Programming Computer Box</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Trouble Shoot</span>
+                    <input type="checkbox">
+                </div>
+                <div class="service">
+                    <span>Body Control Module</span>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="form-row">
+                 <img src="back.png" alt="Back" class="back-button-img" onclick="goBack()">
+                <button class="next-button" type="button">Next</button>
+            </div>>
+        </section>
+
+        <section class="step-content" id="step3-content">
+            <h2 class="step-title">Select Date and Time</h2>
+            <div class="calendar-time-container">
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <div class="month-navigation">
+                            <button class="chevron-left">&lt;</button>
+                            <div id="calendar-month" class="month">August 2024</div>
+                            <button class="chevron-right">&gt;</button>
+                        </div>
+                        <div class="days">
+                            <div>SUN</div>
+                            <div>MON</div>
+                            <div>TUE</div>
+                            <div>WED</div>
+                            <div>THU</div>
+                            <div>FRI</div>
+                            <div>SAT</div>
+                        </div>
+                        <div id="calendar-dates" class="dates">
+                            <!-- Dates will be dynamically populated here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="available-mechanics-container">
+                        <h3>Available Mechanics:</h3>
+                        <div id="available-mechanics" class="mechanics-container"></div>
+                    </div>
+                    <div id="time-slots-container">
+                        <h3>Available Time Slots:</h3>
+                        <div id="time-slots" class="time-slots"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <img src="back.png" alt="Back" class="back-button-img" onclick="updateStep(-1)">
+                <button class="next-button" type="button">Next</button>
+            </div>
+        </section>
+
+        c<section class="step-content" id="step4-content">
+            <h2 class="step4-title">Review and Confirm</h2>
+            <p class="step4-description">
+                Manage your research information, including the project title and focus area, to ensure everything is correct:
+            </p>
+            <div class="confirmation-box">
+                <div class="row">
+                    <div class="col label-style"><strong>FIRST NAME</strong></div>
+                    <div class="col info-style" id="confirm-first-name"></div>
+                    <div class="col label-style"><strong>PLATE NUMBER</strong></div>
+                    <div class="col info-style" id="confirm-plate-number"></div>
+                </div>
+                <div class="row">
+                    <div class="col label-style"><strong>LAST NAME</strong></div>
+                    <div class="col info-style" id="confirm-last-name"></div>
+                    <div class="col label-style"><strong>SELECTED SERVICES</strong></div>
+                    <div class="col info-style" id="confirm-services"></div>
+                </div>
+                <div class="row">
+                    <div class="col label-style"><strong>CONTACT #</strong></div>
+                    <div class="col info-style" id="confirm-contact-number"></div>
+                    <div class="col label-style"><strong>APPOINTMENT DATE</strong></div>
+                    <div class="col info-style" id="confirm-appointment-date"></div>
+                </div>
+                <div class="row">
+                    <div class="col label-style"><strong>CAR BRAND</strong></div>
+                    <div class="col info-style" id="confirm-car-brand"></div>
+                    <div class="col label-style"><strong>APPOINTMENT TIME</strong></div>
+                    <div class="col info-style" id="confirm-appointment-time"></div>
+                </div>
+                <div class="row">
+                    <div class="col label-style"><strong>CAR MODEL</strong></div>
+                    <div class="col info-style" id="confirm-car-model"></div>
+                    <div class="col label-style"><strong>CAR YEAR MODEL</strong></div>
+                    <div class="col info-style" id="confirm-car-year"></div>
+                </div>
+                <div class="row">
+                    <div class="col label-style"><strong>MECHANIC</strong></div>
+                    <div class="col info-style" id="confirm-mechanic"></div>
+                </div>
+            </div> 
+            <div class="form-row">
+                <img src="back.png" alt="Back" class="back-button-img" onclick="updateStep(-1)">
+                <button class="next-button" type="button">Finish</button>
+            </div>
+        </section>
+        
+    </main> 
+    <script src="Appointment.js"></script>
+</body>
+</html>

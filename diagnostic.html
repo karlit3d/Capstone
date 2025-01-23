@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="initial-logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Tech Initial Diagnostic Tool</title>
+    <link rel="stylesheet" href="diagnostic.css">
+</head>
+<body>
+      <div id="overlay"></div>
+        <div class="off-screen-menu">
+            <div class="menu-header">
+                <img src="newlogo.png" alt="AG Logo" class="menu-logo">
+                <span class="menu-title">MENU</span>
+            </div>
+            <ul>
+                <li><a href=".">Home</a></li>
+                <li><a href=".#hero" id="about-link">About Us</a></li>
+                <li><a href=".#services">Services</a></li>
+                <li><a href="Appointment.html">Book</a></li>
+                <li><a href="diagnostic.html">Diagnostic Tool</a></li>
+            </ul>
+        <div class="login-item">
+            <a href="Login.html">Login</a></li>
+        </div>
+        </div>
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo-text">
+                <span class="logo-ag">AG</span>
+                <span class="logo-tech">Tech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href=".">HOME</a></li>
+                <li><a href=".#hero" id="about-link">ABOUT US</a></li>
+                <li><a href=".#services">SERVICES</a></li>
+                <li><a href="Appointment.html">BOOK</a></li>
+                <li><a href="diagnostic.html">DIAGNOSTIC TOOL</a></li>
+            </ul>
+        </nav>
+
+    <section class="diagnostic-banner">
+        <img src="newlogo.png" alt="AG Tech Logo" class="diagnostics-logo">
+        <div class="diagnostic-text">
+            <h2>INITIAL DIAGNOSTIC TOOL </h2>
+           
+        </div>
+    </section>
+    
+    <div class="diagnostic-text">
+     
+        <p>Diagnosis for Every Vehicle, Every Time</p>
+    </div>
+
+
+
+    
+        <section class="chat-container">
+
+            <div class="chat-bubble">
+                <img src="newlogo.png" alt="AG Tech Bot" class="chatbot-logo">
+                <div class="chat-message">Please keep in mind that this is an inital diagnosis only. For a thorough and accurate assessment, we recommend consulting with one of our mechanics.</div>
+            </div>
+
+            <div class="chat-bubble">
+                <img src="newlogo.png" alt="AG Tech Bot" class="chatbot-logo">
+                <div class="chat-message">How can I help you today?</div>
+            </div>
+            <div id="messageContainer"></div> <!-- Container for messages -->
+        </section>
+        <div class="select-container"> <!-- Existing Controls -->
+            <select id="questionSelect">
+                <option value="" disabled selected>Select a Main Root</option>
+                <option value="I can feel">I CAN FEEL</option>
+                <option value="I can see">I CAN SEE</option>
+                <option value="I can smell">I CAN SMELL</option>
+                <option value="I can hear">I CAN HEAR</option>
+            </select>
+            <button id="sendButton">Send</button>
+            <button id="printButton" style="display: none; margin-left: 10px;">Print</button> <!-- New Print Button with spacing -->
+        </div>
+        
+        
+        
+    <script src="diagnostic.js"></script>
+</body>
+</html>
+
+
+
+
+
+

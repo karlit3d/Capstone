@@ -1,0 +1,175 @@
+<?php
+session_start();
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+    header('Location: login.html'); // Redirect to login page if not authenticated
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="admin-appointment.css">
+</head>
+<body>
+    <!-- Header from admin-inventory.html -->
+    <div class="header">
+        <div class="header-left">
+            <h1>AG</h1>
+            <h2>TECH</h2>
+            <div class="nav-links">
+                <a href="admin-dashboard.php" class="nav-item">Dashboard</a>
+                <a href="admin-inventory.php" class="nav-item">Inventory</a>
+                <a href="admin-appointment.php" class="nav-item active">Appointments</a> <!-- Updated link -->
+                <a href="service-tagging.php" class="nav-item">Service Tagging</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <p>Hey, Admin</p>
+            <div class="profile-pic"></div> 
+        </div>
+    </div>
+
+    <!-- Heading Section -->
+    <section class="booking-header">
+        <h1>APPOINTMENT MANAGEMENT</h1>
+        <p class="subheading">Booking Processing Module</p>
+    </section>
+
+    <!-- Tabs inside a gray container -->
+    <div class="tab-container">
+        <div class="tabs">
+            <button class="tab active" data-tab="upcoming">Upcoming</button>
+            <button class="tab" data-tab="pending">Pending</button>
+            <button class="tab" data-tab="past">Past</button>
+            <button class="tab" data-tab="cancelled">Cancelled</button>
+        </div>
+    </div>
+        
+    
+    <div class="tab-content" id="pending">
+        <div class="appointments-list" id="pending-list">
+            <!-- Pending appointments will be displayed here -->
+        </div>
+    </div>
+
+    <div class="tab-content" id="past">
+        <div class="appointments-list" id="past-list">
+            <!-- Past appointments will be displayed here -->
+        </div>
+        <div id="pagination-controls">
+            <!-- Pagination controls will be rendered here -->
+        </div>
+    </div>
+
+
+    <div class="tab-content" id="cancelled">
+        <div class="appointments-list" id="cancelled-list">
+            <!-- Cancelled appointments will be displayed here -->
+        </div>
+        <div id="cancelled-pagination-controls">
+            <!-- Pagination controls will be rendered here -->
+        </div>
+    </div>
+
+
+    <div class="calendar-container1">
+        <!-- Month Selector with Font Awesome Arrows -->
+        <div class="month-selector">
+            <button id="prev-month" class="month-button"><i class="fas fa-chevron-left"></i></button> <!-- Left arrow -->
+            <span id="month-name" class="month-name">August 2024</span>
+            <button id="next-month" class="month-button"><i class="fas fa-chevron-right"></i></button> <!-- Right arrow -->
+        </div>
+        
+        <!-- Days of the week -->
+        <div class="days-of-week">
+            <div>SUN</div>
+            <div>MON</div>
+            <div>TUE</div>
+            <div>WED</div>
+            <div>THU</div>
+            <div>FRI</div>
+            <div>SAT</div>
+        </div>
+        
+        <!-- Calendar -->
+        <div id="calendar" class="calendar"></div>
+        
+        <!-- Appointments List -->
+        <div id="booking-list"></div>
+        
+         
+        <!-- Upcoming Tab -->
+        <div class="tab-content active" id="upcoming">
+            <div class="calendar">
+                <!-- Calendar UI -->
+                <div id="calendar">
+                    <!-- Use JavaScript to generate the calendar here -->
+                </div>
+            </div>
+            <div class="appointments-list" id="booking-list">
+                <!-- Upcoming appointments for the selected date will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Popup Modal for Edit -->
+        <div id="edit-popup" class="hidden">
+            <div class="popup-content">
+                <ul>
+                    <!-- Dynamic buttons will be inserted here via JS -->
+                </ul>
+            </div>
+        </div>
+        <!-- Popup Modal for Reschedule -->
+        <div id="reschedule-popup" class="popup-container" style="display:none;">
+            <div class="reschedule-popup-content">
+                <h3>Reschedule Appointment</h3>
+
+                <!-- Calendar Section with Chevron for month navigation -->
+                <div id="reschedule-calendar-container" class="calendar-container2">
+                    <div class="month-navigation">
+                        <button class="chevron-left">&lt;</button>
+                        <div id="calendar-month" class="month"></div>  <!-- Month and Year -->
+                        <button class="chevron-right">&gt;</button>
+                    </div>
+                    <div class="days">
+                        <div>SUN</div>
+                        <div>MON</div>
+                        <div>TUE</div>
+                        <div>WED</div>
+                        <div>THU</div>
+                        <div>FRI</div>
+                        <div>SAT</div>
+                    </div>
+                    <div id="calendar-dates" class="dates"></div>  <!-- Calendar Dates -->
+                </div>
+
+                <!-- Time Slots Section -->
+                <h4>Select Time Slot:</h4>
+                <div id="time-slots" class="time-slots"></div>
+
+                <!-- Available Mechanics Section -->
+                <h4>Select Mechanic:</h4>
+                <div id="available-mechanics" class="mechanics-container"></div>
+        
+                <!-- Hidden Inputs to store selected values -->
+                <input type="hidden" id="appointment-date">
+                <input type="hidden" id="appointment-time">
+                <input type="hidden" id="selected-mechanic">
+
+                <!-- Buttons -->
+                <div class="popup-buttons">
+                    <button id="cancel-reschedule">Cancel</button>
+                    <button id="confirm-reschedule">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-appointment.js"></script>
+</body>
+</html>   
